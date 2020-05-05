@@ -1,0 +1,102 @@
+##############################################
+# Settings
+##############################################
+background no
+use_xft yes
+xftfont Monospace:size=8
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type normal
+own_window_argb_visual yes
+own_window_hints undecorated,below,sticky,skip_pager, skip_taskbar
+double_buffer yes
+minimum_size 200 200
+maximum_width 190
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color FFFFFF
+default_shade_color 000000
+default_outline_color black
+color3 979797
+color4 AntiqueWhite4
+gap_x -1900
+gap_y 0
+no_buffers yes
+alignment top_right
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+text_buffer_size 2048
+max_user_text 65000
+##############################################
+#  Output
+##############################################
+TEXT
+ 
+#Sector 1: Time, Date, Year
+#Use next line for title
+#${font monospace:bold:size=12}DATE ${hr 2}
+${font monospace:size=29}${alignc}${time %I:%M:%S}${font}
+ 
+${font monospace:bold:size=12}${alignc}${time %a | %d %b | %Y'}
+
+#Sector 3: "Battery"
+#${font monospace:bold:size=12}Battery: $alignr ${battery}
+#${battery_bar BAT1}
+#${font monospace:normal:size=8}Uptime:$alignr$uptime 
+#Sector 4: "CPU", Core Frequency, Core temp, CPU1,2,3,&4 gauge
+${font monospace:bold:size=12}Intel i3-3217U ${hr 2}
+${font monospace:bold:size=8}${cpugraph cpu0 FFFFFF FFFFFF}
+${font monospace:normal:size=8}Core frequency $color $alignr ${freq_g (1)} GHz
+#Core 1 temp: $alignr ${hwmon 0 temp 1} C
+CPU: ${execi 60 sensors | grep Tdie | cut -c 16-19}C $alignr GPU: ${execi 60 sensors | grep edge | cut -c 16-19}C
+
+#Not sure what these temps are
+#What1: ${hwmon 2 temp 1}C
+#What2: ${hwmon 0 temp 1}C
+#What3: ${hwmon 0 temp 2}C
+CPU1: ${cpu cpu1}% ${cpubar cpu1}
+CPU2: ${cpu cpu2}% ${cpubar cpu2}
+CPU3: ${cpu cpu3}% ${cpubar cpu3}
+CPU4: ${cpu cpu4}% ${cpubar cpu4}
+
+
+#Sector 5: "HDD & RAM", RAM use gauge, HDD use gauge
+${font monospace:bold:size=12}HDD & RAM ${hr 2}
+${font monospace:normal:size=8}SSD $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
+${fs_bar /}
+#${font monospace:normal:size=8}HDD $alignc ${fs_used /mnt/data} / ${fs_size /mnt/data} #$alignr ${fs_used_perc /mnt/data}%
+#${fs_bar /mnt/data}
+${font monospace:normal:size=8}RAM $alignc $mem / $memmax $alignr $memperc%
+$membar 
+${font monospace:normal:size=8}Swap $alignc ${swap /} / ${swapmax} $alignr ${swapperc}%
+$swapbar
+${font monospace:normal:size=8}Disk IO SSD: $font$alignr${diskio sda2}
+${diskiograph sda2}
+#${font monospace:normal:size=8}Disk IO HDD: $font$alignr${diskio sdb1}
+#${diskiograph sdb1}
+
+#Sector 6: "Network", Wi-Fi ID, Signal, IP address, Upload/Download graph
+${font monospace:bold:size=12}NETWORK ${hr 2}
+${font monospace:normal:size=8}ID:$alignr${wireless_essid wlp2s0}
+Signal: $alignr ${wireless_link_qual_perc wlp2s0}%
+IP address: $alignr ${addr wlp2s0}
+${downspeedgraph wlp2s0}
+${font monospace:normal:size=8}Down:(${totaldown wlp2s0}) $alignr${downspeed wlp2s0}/s
+${font monospace:normal:size=8}Up:  (${totalup wlp2s0}) $alignr${upspeed wlp2s0}/s
+#${upspeedgraph enp4s0}
+#${font monospace:normal:size=8}Up:       (Tot: ${totalup enp4s0}) $alignr ${upspeed enp4s0}/s
+ 
+#Sector 7: "Top Processes"
+${font monospace:bold:size=12}TOP PROCESSES ${hr 2}
+${font monospace:normal:size=8}${top_mem name 1}${alignr}${top mem 1} %
+${top_mem name 2}${alignr}${top mem 2} %
+$font${top_mem name 3}${alignr}${top mem 3} %
+$font${top_mem name 4}${alignr}${top mem 4} %
+#$font${top_mem name 5}${alignr}${top mem 5} %
+#${execi 300 date +"%B %Y"}.
