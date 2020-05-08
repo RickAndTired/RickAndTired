@@ -13,8 +13,6 @@ gsettings set org.gnome.mutter attach-modal-dialogs false
 
 gsettings set org.gnome.gedit.preferences.editor scheme oblivion
 
-# gsettings set org.gnome.Terminal.Legacy.Profile:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ use-theme-colors false
-
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action interactive
 
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
@@ -30,6 +28,8 @@ gsettings set org.gnome.nautilus.preferences show-create-link true
 gsettings set org.gnome.nautilus.preferences thumbnail-limit 1000 # (1GB)
 
 gsettings set org.gnome.nautilus.preferences executable-text-activation ask
+
+#gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend false
 
 gsettings set org.gnome.desktop.session idle-delay 0
 
@@ -90,6 +90,9 @@ echo "alias yt='/snap/bin/youtube-dl'" >> ~/.bashrc
 # Ubuntu dock
 # Firefox Files Gedit Calculator Gpodder Strawberry Discord Steam Qvevri System-Monitor Terminal
 
+# Files bookmarks
+# data share steamapps Games Temp
+
 # Conky - autostart
 
 # Gnome Terminal
@@ -104,6 +107,8 @@ echo "alias yt='/snap/bin/youtube-dl'" >> ~/.bashrc
 # Celluloid
 # Always open new window
 # skip button for controlling playlist
+# gPodder
+# celluloid --mpv-options=--speed=2.0 %U
 
 # VLC
 # [ToolbarProfiles]
@@ -137,22 +142,19 @@ echo "alias yt='/snap/bin/youtube-dl'" >> ~/.bashrc
 
 # Swap file
 
+# /usr/share/applications/
+# update-manager.desktop
+# Name=Software Update
+# software-properties-gtk.desktop
+# Name=Software Sources
 
+# OBS Settings
+# mkv - x264 - VBR - 50000 - CRF 15-22 - Keyframe 0 - CPU superfast/ultrafast
+# Audio 44.1khz - Video Lanczos - Advanced Color Space 709 - Color Range Full
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Qvevri
+# Enable left/right panel
+# Enable libretro, dolphin, pcsx2
 
 
 
