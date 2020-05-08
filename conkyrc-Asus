@@ -54,7 +54,7 @@ ${font monospace:bold:size=12}Intel i3-3217U ${hr 2}
 ${font monospace:bold:size=8}${cpugraph cpu0 FFFFFF FFFFFF}
 ${font monospace:normal:size=8}Core frequency $color $alignr ${freq_g (1)} GHz
 #Core 1 temp: $alignr ${hwmon 0 temp 1} C
-CPU: ${execi 60 sensors | grep "id 0" | cut -c 16-19}C | ${execi 60 sensors | grep "Core 0" | cut -c 16-19}C | ${execi 60 sensors | grep "Core 1" | cut -c 16-19}C
+CPU: $alignr ${execi 60 sensors | grep "id 0" | cut -c 16-19}C | ${execi 60 sensors | grep "Core 0" | cut -c 16-19}C | ${execi 60 sensors | grep "Core 1" | cut -c 16-19}C
 #Not sure what these temps are
 #What1: ${hwmon 2 temp 1}C
 #What2: ${hwmon 0 temp 1}C
