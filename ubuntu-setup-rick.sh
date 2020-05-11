@@ -2,16 +2,18 @@
 
 sudo apt update
 
-sudo apt install synaptic celluloid gnome-tweaks gnome-shell-extensions dconf-editor htop mumble wine gufw conky lm-sensors steam-installer gpodder calibre gnome-sushi
+sudo apt install -y synaptic celluloid gnome-tweaks gnome-shell-extensions dconf-editor htop mumble wine gufw conky lm-sensors gnome-boxes steam-installer vlc gpodder calibre gnome-sushi
 
 # ubuntu-restricted-extras exfat-utils p7zip-rar pavucontrol
 
-#sudo snap install discord strawberry spotify obs-studio telegram-desktop inkscape kdenlive youtube-dl glimpse-editor chromium minetest openspades gallery-dl vlc
+#sudo snap install chromium inkscape glimpse-editor kdenlive obs-studio discord strawberry spotify telegram-desktop minetest openspades youtube-dl gallery-dl
 
 
 gsettings set org.gnome.mutter attach-modal-dialogs false
 
 gsettings set org.gnome.gedit.preferences.editor scheme oblivion
+
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
 
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action interactive
 
@@ -28,6 +30,10 @@ gsettings set org.gnome.nautilus.preferences show-create-link true
 gsettings set org.gnome.nautilus.preferences thumbnail-limit 1000 # (1GB)
 
 gsettings set org.gnome.nautilus.preferences executable-text-activation ask
+
+#gsettings set org.gnome.Terminal.Legacy.Keybindings copy "<Primary>c"
+
+#gsettings set org.gnome.Terminal.Legacy.Keybindings paste "<Primary>v"
 
 #gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend false
 
@@ -62,8 +68,8 @@ rm v0.1-beta.tar.gz
 
 
 # libinput-gestures install
-#sudo gpasswd -a $USER input
-#sudo apt install xdotool wmctrl libinput-tools git
+#sudo adduser $USER input
+#sudo apt install -y xdotool wmctrl libinput-tools git
 #git clone https://github.com/bulletmark/libinput-gestures.git
 #cd libinput-gestures
 #sudo ./libinput-gestures-setup install
@@ -79,6 +85,9 @@ echo "alias qvevri='/opt/Qvevri/bin/qvevri'" >> ~/.bashrc
 echo "alias gm='gamemoded -r'" >> ~/.bashrc
 echo "alias yt='/snap/bin/youtube-dl'" >> ~/.bashrc
 
+sudo adduser $USER kvm
+
+echo Setup complete
 
 # Configurations via GUIs
 
@@ -87,21 +96,39 @@ echo "alias yt='/snap/bin/youtube-dl'" >> ~/.bashrc
 # Default Video player - Celluloid
 # Default Music player - Celluloid
 
+# Gnome Tweaks
+# Kill x server - ctrl+alt+backspace
+
+# Gnome Terminal
+# Use colors from system theme - Disable
+# Shortcuts
+# Ctrl+C and Ctrl+V for Copy and Paste
+
 # Ubuntu dock
 # Firefox Files Gedit Calculator Gpodder Strawberry Discord Steam Qvevri System-Monitor Terminal
+
+# Gnome Shell
+# Accessories - Archive Manager, Calculator, Cheese, Document Scanner, Document Viewer, Files, Screenshot, Startup Disk Creator, System Monitor, Terminal, Text Editor
+# Games - Solitaire, Mahjongg, Mines, Minetest, Qvevri, Steam, Sudoku
+# Graphics - Glimpse, Image Viewer, Inkscape, Shotwell
+# Internet - Chromium, Discord, Firefox, Mumble, Thunderbird, Transmission
+# Office - Calendar, LibreOffice
+# Sound & Video - Celluloid, mpv, OBS, Rhythmbox, Strawberry, Videos, VLC
+# System - dconf Editor, Disk Usage, Disks, Extensions, Firewall, Settings, Software Sources, Software Updater, Startup Applications, Synaptic, Tweaks, Ubuntu Software
+# Useless - 
+
+# /usr/share/applications/
+# update-manager.desktop
+# Name=Software Update
+# software-properties-gtk.desktop
+# Name=Software Sources
 
 # Files bookmarks
 # data share steamapps Games Temp
 
 # Conky - autostart
 
-# Gnome Terminal
-# Change color
-# Shortcuts
-# Ctrl+C and Ctrl+V for Copy and Paste
-
 # Gedit
-# Change color
 # Tab width 4 spaces
 
 # Celluloid
@@ -112,7 +139,7 @@ echo "alias yt='/snap/bin/youtube-dl'" >> ~/.bashrc
 
 # VLC
 # [ToolbarProfiles]
-# 7\ProfileName=Min-R
+# Save a profile then replace Value
 # 7\Value="1|64;39;64;38;65;|0-5;64;3-5;4-5;64;64;10-5;20-5;19-5;64-4;33-4;34-4;42-5;37;35-5;|12;11;13;14;||0-5;64;3-5;4-5;64;37;33-5;34;25-5;35-5;"
 
 # Inkscape
@@ -126,6 +153,19 @@ echo "alias yt='/snap/bin/youtube-dl'" >> ~/.bashrc
 # toolkit.tabbox.switchByScrolling;true
 # brower.tabs.tabMinWidth;50
 # Ublock Origin, Privacy Badger, Bitwarden, Container tabs
+# Ctrl+Tab cycle recent - Disable
+# Always ask where to save files - Enable
+# Play DRM - Enable
+# Firefox Home Content - Disable
+# Search - DuckDuckGo
+# Providde search suggestions - Disable
+# Search Engines - Keyword - Google=g - Wikipedia=w
+# Privacy - Strict
+# Do Not Track - Always
+# Ask to save logins and passwords - Disable
+# Allow Firefox to make personalized extension recommendations - Disable
+# Allow Firefox to install and run studies - Disable
+# Allow Firefox to send backlogged crash reports - Enabled
 
 # ACO video drivers
 # /etc/environment
@@ -142,12 +182,6 @@ echo "alias yt='/snap/bin/youtube-dl'" >> ~/.bashrc
 
 # Swap file
 
-# /usr/share/applications/
-# update-manager.desktop
-# Name=Software Update
-# software-properties-gtk.desktop
-# Name=Software Sources
-
 # OBS Settings
 # mkv - x264 - VBR - 50000 - CRF 15-22 - Keyframe 0 - CPU superfast/ultrafast
 # Audio 44.1khz - Video Lanczos - Advanced Color Space 709 - Color Range Full
@@ -155,7 +189,6 @@ echo "alias yt='/snap/bin/youtube-dl'" >> ~/.bashrc
 # Qvevri
 # Enable left/right panel
 # Enable libretro, dolphin, pcsx2
-
 
 
 
