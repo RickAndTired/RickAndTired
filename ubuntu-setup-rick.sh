@@ -86,8 +86,6 @@ echo "# Alias" >> ~/.bashrc
 echo "alias gm='gamemoded -r'" >> ~/.bashrc
 echo "alias yt='/snap/bin/youtube-dl'" >> ~/.bashrc
 
-#echo "RADV_PERFTEST=aco" >> /etc/environment
-
 #sudo adduser $USER kvm
 
 echo Setup complete
@@ -171,6 +169,9 @@ echo Setup complete
 # Allow Firefox to install and run studies - Disable
 # Allow Firefox to send backlogged crash reports - Enabled
 
+# AMD ACO - add line to bottom
+# /etc/environment
+# RADV_PERFTEST=aco
 
 # Pulse Audio Latency
 # Check current latency
