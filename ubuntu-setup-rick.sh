@@ -2,11 +2,11 @@
 
 sudo apt update
 
-sudo apt install -y synaptic celluloid gnome-tweaks gnome-shell-extensions dconf-editor pavucontrol libopengl0 htop mumble wine gufw conky lm-sensors gnome-boxes steam-installer vlc gpodder calibre gnome-sushi
+sudo apt install -y synaptic celluloid gnome-tweaks gnome-shell-extensions dconf-editor pavucontrol unrar libopengl0 htop mumble wine gufw conky lm-sensors gnome-boxes steam-installer vlc gpodder calibre gnome-sushi
 
 # ubuntu-restricted-extras exfat-utils p7zip-rar
 
-#sudo snap install chromium inkscape glimpse-editor kdenlive obs-studio discord strawberry spotify telegram-desktop minetest openspades youtube-dl gallery-dl
+#sudo snap install chromium inkscape glimpse-editor kdenlive obs-studio discord strawberry spotify telegram-desktop minetest openspades retroarch youtube-dl gallery-dl
 
 
 gsettings set org.gnome.mutter attach-modal-dialogs false
@@ -78,6 +78,7 @@ rm v0.1-beta.tar.gz
 #cd ..
 #rm -rf libinput-gestures/
 
+touch /home/$USER/Templates/'New Document'
 
 # Bash Aliases
 echo >> ~/.bashrc
@@ -115,7 +116,7 @@ echo Setup complete
 # Internet - Chromium, Discord, Firefox, Mumble, Telegram, Thunderbird, Transmission
 # Office - Calendar, LibreOffice
 # Sound & Video - Celluloid, gPodder, mpv, OBS, Rhythmbox, Spotify, Strawberry, Videos, VLC
-# System - dconf Editor, Disk Usage, Disks, Extensions, Firewall, Settings, Software Sources, Software Updater, Startup Applications, Synaptic, Tweaks, Ubuntu Software
+# System - dconf Editor, Disk Usage, Disks, Extensions, Firewall, Pavucontrol, Settings, Software Sources, Software Updater, Startup Applications, Synaptic, Tweaks, Ubuntu Software
 # Useless - 
 
 # /usr/share/applications/update-manager.desktop 
@@ -192,13 +193,9 @@ echo Setup complete
 # Enable libretro, dolphin, pcsx2
 
 # Dolphin fix
-#ln -s /usr/lib/x86_64-linux-gnu/libsndio.so.7.0 /usr/lib/x86_64-linux-gnu/libsndio.so.6.1
+#sudo ln -s /usr/lib/x86_64-linux-gnu/libsndio.so.7.0 /usr/lib/x86_64-linux-gnu/libsndio.so.6.1
 
 #sudo ln -s /opt/RetroArch/retroarch /bin/retroarch
 
-
-
-
-
-
-
+# Epic Game Store fix
+# -SkipBuildPatchPrereq -opengl
