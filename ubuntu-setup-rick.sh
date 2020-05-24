@@ -78,7 +78,7 @@ rm v0.1-beta.tar.gz
 #cd ..
 #rm -rf libinput-gestures/
 
-touch /home/$USER/Templates/'New Document'
+touch ~/Templates/'New Document'
 
 # Bash Aliases
 echo >> ~/.bashrc
