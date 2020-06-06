@@ -58,6 +58,9 @@ gsettings set org.gnome.shell.extensions.user-theme name Yaru-dark
 
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 
+gnome-extensions disable ubuntu-appindicators@ubuntu.com
+
+gnome-extensions disable desktop-icons@csoriano
 
 # Qvevri installer
 wget https://github.com/RickAndTired/Qvevri/archive/v0.1-beta.tar.gz
@@ -94,7 +97,9 @@ echo Setup complete
 # Configurations via GUIs
 
 # Gnome Settings
-# Keyboard shortcut - gnome-system-monitor ctrl+shift+esc
+# Keyboard shortcut
+# gnome-system-monitor ctrl+shift+esc
+# xkill ctrl+shift+~
 # Default Video player - Celluloid
 # Default Music player - Celluloid
 
@@ -105,6 +110,11 @@ echo Setup complete
 # Use colors from system theme - Disable
 # Shortcuts
 # Ctrl+C and Ctrl+V for Copy and Paste
+
+# Gamemode
+# /etc/gamemode.ini
+# comment out ;defaultgov=powersave
+# or set to schedutil
 
 # Ubuntu dock
 # Firefox Files Gedit Calculator Gpodder Strawberry Discord Steam Qvevri System-Monitor Terminal
@@ -141,7 +151,7 @@ echo Setup complete
 # celluloid --mpv-options=--speed=2.0 %U
 
 # VLC
-# [ToolbarProfiles]
+# .config/vlc/vlc-qt-interface.conf
 # Save a profile then replace Value
 # 7\Value="1|64;39;64;38;65;|0-5;64;3-5;4-5;64;64;10-5;20-5;19-5;64-4;33-4;34-4;42-5;37;35-5;|12;11;13;14;||0-5;64;3-5;4-5;64;37;33-5;34;25-5;35-5;"
 
@@ -151,6 +161,11 @@ echo Setup complete
 # Alsamixer
 # Automute - off
 # (20.04 no longer needed) sudo alsactl store
+# /var/lib/alsa/asound.state
+# control.19 - value Disabled
+
+# rnnoise mic suppression
+# 
 
 # Firefox
 # toolkit.tabbox.switchByScrolling;true
@@ -199,3 +214,8 @@ echo Setup complete
 
 # Epic Game Store fix
 # -SkipBuildPatchPrereq -opengl
+
+
+
+
+
