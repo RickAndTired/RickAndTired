@@ -27,7 +27,8 @@ gsettings set org.gnome.shell.extensions.dash-to-dock click-action minimize
 
 gsettings set org.gnome.nautilus.preferences show-create-link true
 
-gsettings set org.gnome.nautilus.preferences thumbnail-limit 1000 # (1GB)
+gsettings set org.gnome.nautilus.preferences thumbnail-limit 1000 
+# (1GB)
 
 gsettings set org.gnome.nautilus.preferences executable-text-activation ask
 
@@ -86,7 +87,6 @@ touch ~/Templates/'New Document'
 # Bash Aliases
 echo >> ~/.bashrc
 echo "# Alias" >> ~/.bashrc
-#echo "alias qvevri='/opt/Qvevri/bin/qvevri'" >> ~/.bashrc
 echo "alias gm='gamemoded -r'" >> ~/.bashrc
 echo "alias yt='/snap/bin/youtube-dl'" >> ~/.bashrc
 
@@ -110,11 +110,6 @@ echo Setup complete
 # Use colors from system theme - Disable
 # Shortcuts
 # Ctrl+C and Ctrl+V for Copy and Paste
-
-# Gamemode
-# /etc/gamemode.ini
-# comment out ;defaultgov=powersave
-# or set to schedutil
 
 # Ubuntu dock
 # Firefox Files Gedit Calculator Gpodder Strawberry Discord Steam Qvevri System-Monitor Terminal
@@ -160,12 +155,8 @@ echo Setup complete
 
 # Alsamixer
 # Automute - off
-# (20.04 no longer needed) sudo alsactl store
-# /var/lib/alsa/asound.state
-# control.19 - value Disabled
 
 # rnnoise mic suppression
-# 
 
 # Firefox
 # toolkit.tabbox.switchByScrolling;true
