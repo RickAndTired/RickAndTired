@@ -2,12 +2,11 @@
 
 sudo apt update
 
-sudo apt install -y synaptic celluloid gnome-tweaks gnome-shell-extensions dconf-editor pavucontrol unrar libopengl0 htop mumble wine gufw conky lm-sensors gnome-boxes steam-installer vlc gpodder calibre gnome-sushi
+sudo apt install -y synaptic celluloid gnome-tweaks gnome-shell-extensions dconf-editor pavucontrol unrar libopengl0 htop wine gufw conky lm-sensors gnome-boxes steam-installer vlc gpodder calibre gnome-sushi
 
 # ubuntu-restricted-extras exfat-utils p7zip-rar
 
-#sudo snap install chromium inkscape glimpse-editor kdenlive obs-studio discord strawberry spotify telegram-desktop minetest openspades retroarch youtube-dl gallery-dl
-
+#sudo snap install chromium mumble inkscape glimpse-editor kdenlive obs-studio discord strawberry spotify telegram-desktop minetest openspades retroarch youtube-dl gallery-dl
 
 gsettings set org.gnome.mutter attach-modal-dialogs false
 
