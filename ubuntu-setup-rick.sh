@@ -6,7 +6,8 @@ sudo apt install -y synaptic celluloid gnome-tweaks gnome-shell-extensions dconf
 
 # ubuntu-restricted-extras exfat-utils p7zip-rar
 
-#sudo snap install chromium mumble inkscape glimpse-editor kdenlive obs-studio discord strawberry spotify telegram-desktop minetest openspades retroarch youtube-dl gallery-dl
+#sudo snap install chromium mumble inkscape glimpse-editor obs-studio discord strawberry spotify telegram-desktop minetest openspades retroarch youtube-dl gallery-dl kdenlive
+
 
 gsettings set org.gnome.mutter attach-modal-dialogs false
 
@@ -179,13 +180,20 @@ echo Setup complete
 # /usr/share/applications/software-properties-gtk.desktop
 # Name=Software Sources
 #sudo sed -i 's/Name=Software Updater/Name=Software Update/g' /usr/share/applications/update-manager.desktop
-#sudo sed -i 's/Name=Software & Updates/Name=Name=Software Sources/g' /usr/share/applications/software-properties-gtk.desktop
+#sudo sed -i 's/Name=Software & Updates/Name=Software Sources/g' /usr/share/applications/software-properties-gtk.desktop
 
 # AMD ACO - add line to bottom
 # /etc/environment
 # RADV_PERFTEST=aco
 
 # Swap file
+#sudo swapoff -a
+#sudo fallocate -l 8G /swap8
+#sudo chmod 600 /swap8
+#sudo mkswap /swap8
+#sudo swapon /swap8
+#sudo nano /etc/fstab
+# /swap8 none swap sw 0 0
 
 #sudo ln -s /opt/RetroArch/retroarch /bin/retroarch
 
