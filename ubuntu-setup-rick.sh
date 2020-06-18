@@ -152,6 +152,7 @@ echo Setup complete
 # Audio 44.1khz - Video Lanczos - Advanced Color Space 709 - Color Range Full
 
 # VLC
+# Show system tray icon - Disable
 # .config/vlc/vlc-qt-interface.conf
 # Save a profile then replace Value
 # 7\Value="1|64;39;64;38;65;|0-5;64;3-5;4-5;64;64;10-5;20-5;19-5;64-4;33-4;34-4;42-5;37;35-5;|12;11;13;14;||0-5;64;3-5;4-5;64;37;33-5;34;25-5;35-5;"
@@ -181,6 +182,7 @@ echo Setup complete
 # Name=Software Sources
 #sudo sed -i 's/Name=Software Updater/Name=Software Update/g' /usr/share/applications/update-manager.desktop
 #sudo sed -i 's/Name=Software & Updates/Name=Software Sources/g' /usr/share/applications/software-properties-gtk.desktop
+# Software Sources - Updates - display immediately
 
 # AMD ACO - add line to bottom
 # /etc/environment
