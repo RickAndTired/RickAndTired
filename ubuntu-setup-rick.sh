@@ -4,9 +4,9 @@ sudo apt update
 
 sudo apt install -y synaptic celluloid gnome-tweaks gnome-shell-extensions dconf-editor pavucontrol unrar libopengl0 htop wine gufw conky lm-sensors gnome-boxes steam-installer vlc gpodder calibre gnome-sushi
 
-# ubuntu-restricted-extras exfat-utils p7zip-rar
+# ubuntu-restricted-extras exfat-utils p7zip-rar mesa-utils vulkan-tools
 
-#sudo snap install chromium mumble inkscape glimpse-editor obs-studio discord strawberry spotify telegram-desktop minetest openspades retroarch youtube-dl gallery-dl kdenlive
+#sudo snap install chromium mumble inkscape glimpse-editor obs-studio discord tauon strawberry spotify telegram-desktop minetest openspades retroarch youtube-dl gallery-dl kdenlive
 
 
 gsettings set org.gnome.mutter attach-modal-dialogs false
@@ -86,8 +86,9 @@ rm v0.1-beta.tar.gz
 # Bash Aliases
 echo >> ~/.bashrc
 echo "# Alias" >> ~/.bashrc
-echo "alias gm='gamemoded -r'" >> ~/.bashrc
+echo "alias gmode='gamemoded -r'" >> ~/.bashrc
 echo "alias yt='/snap/bin/youtube-dl'" >> ~/.bashrc
+echo "alias ytmp3='/snap/bin/youtube-dl --extract-audio --audio-format mp3'" >> ~/.bashrc
 
 #sudo adduser $USER kvm
 
@@ -149,7 +150,7 @@ echo Setup complete
 
 # OBS Settings
 # mkv - x264 - VBR - 50000 - CRF 15-22 - Keyframe 0 - CPU superfast/ultrafast
-# Audio 44.1khz - Video Lanczos - Advanced Color Space 709 - Color Range Full
+# Audio 44.1khz - Video Lanczos - Advanced Color Space 709 - Color Range Partial
 
 # VLC
 # Show system tray icon - Disable
