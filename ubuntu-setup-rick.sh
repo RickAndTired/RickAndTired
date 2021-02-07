@@ -4,7 +4,7 @@ sudo apt update
 
 sudo apt install -y synaptic celluloid gnome-tweaks gnome-shell-extensions dconf-editor pavucontrol unrar libopengl0 htop wine gufw conky lm-sensors gnome-boxes steam-installer vlc gpodder calibre gnome-sushi
 
-# ubuntu-restricted-extras exfat-utils p7zip-rar mesa-utils vulkan-tools
+# ubuntu-restricted-extras exfat-utils p7zip-rar mesa-utils vulkan-tools graphicsmagick
 
 #sudo snap install chromium mumble inkscape glimpse-editor obs-studio discord tauon strawberry spotify telegram-desktop minetest openspades retroarch youtube-dl gallery-dl kdenlive
 
@@ -62,6 +62,9 @@ gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gnome-extensions disable ubuntu-appindicators@ubuntu.com
 
 gnome-extensions disable desktop-icons@csoriano
+
+
+sudo snap set system refresh.timer=23:00-23:30
 
 
 # Qvevri installer
@@ -161,6 +164,7 @@ echo Setup complete
 # Firefox
 # toolkit.tabbox.switchByScrolling;true
 # brower.tabs.tabMinWidth;50
+# gfx.webrender.all;true
 # Ublock Origin, Privacy Badger, Bitwarden, Container tabs
 # Ctrl+Tab cycle recent - Disable
 # Always ask where to save files - Enable
