@@ -2,11 +2,13 @@
 
 sudo apt update
 
-sudo apt install -y synaptic celluloid gnome-tweaks gnome-shell-extensions dconf-editor pavucontrol unrar libopengl0 htop wine gufw conky lm-sensors gnome-boxes steam-installer vlc gpodder calibre gnome-sushi
+sudo apt install -y synaptic celluloid gnome-tweaks gnome-shell-extensions dconf-editor pavucontrol unrar libopengl0 htop wine gufw conky lm-sensors gnome-boxes steam-installer vlc python3-pip gpodder calibre gnome-sushi
 
 # ubuntu-restricted-extras exfat-utils p7zip-rar mesa-utils vulkan-tools graphicsmagick
 
-#sudo snap install chromium mumble inkscape glimpse-editor obs-studio discord tauon strawberry spotify telegram-desktop minetest openspades retroarch youtube-dl gallery-dl kdenlive
+#sudo snap install chromium mumble inkscape glimpse-editor obs-studio discord tauon strawberry spotify telegram-desktop minetest openspades retroarch gallery-dl kdenlive
+
+sudo pip install --upgrade youtube_dl
 
 
 gsettings set org.gnome.mutter attach-modal-dialogs false
@@ -86,12 +88,21 @@ rm v0.1-beta.tar.gz
 #rm -rf libinput-gestures/
 
 
+# FireFox Gnome Theme
+git clone https://github.com/rafaelmardojai/firefox-gnome-theme
+./firefox-gnome-theme/scripts/install.sh
+# Update within your-profile-folder/chrome/firefox-gnome-theme
+# git pull origin master
+
 # Bash Aliases
 echo >> ~/.bashrc
 echo "# Alias" >> ~/.bashrc
 echo "alias gmode='gamemoded -r'" >> ~/.bashrc
-echo "alias yt='/snap/bin/youtube-dl'" >> ~/.bashrc
-echo "alias ytmp3='/snap/bin/youtube-dl --extract-audio --audio-format mp3'" >> ~/.bashrc
+echo "alias ytup='sudo pip install --upgrade youtube_dl'" >> ~/.bashrc
+echo "alias yt='youtube-dl'" >> ~/.bashrc
+echo "alias ytmp3='youtube-dl -x --audio-format mp3'" >> ~/.bashrc
+echo "alias ytogg='youtube-dl -x --audio-format vorbis'" >> ~/.bashrc
+
 
 #sudo adduser $USER kvm
 
