@@ -2,9 +2,9 @@
 
 sudo apt update
 
-sudo apt install -y synaptic celluloid gnome-tweaks gnome-shell-extensions dconf-editor pavucontrol unrar libopengl0 htop wine gufw conky lm-sensors gnome-boxes steam-installer vlc python3-pip gpodder calibre gnome-sushi
+sudo apt install -y synaptic celluloid gnome-tweaks gnome-shell-extensions dconf-editor pavucontrol exfat-utils unrar libopengl0 htop wine gufw conky lm-sensors gnome-boxes steam-installer vlc python3-pip gpodder calibre gnome-sushi
 
-# ubuntu-restricted-extras exfat-utils p7zip-rar mesa-utils vulkan-tools graphicsmagick
+# ubuntu-restricted-extras p7zip-rar mesa-utils vulkan-tools graphicsmagick
 
 #sudo snap install chromium mumble inkscape glimpse-editor obs-studio discord tauon strawberry spotify telegram-desktop minetest openspades retroarch gallery-dl kdenlive
 
