@@ -70,6 +70,7 @@ gsettings set org.gnome.gedit.preferences.editor.scheme Yaru-dark
 
 #gnome-extensions disable desktop-icons@csoriano
 
+#gnome-extensions disable ubuntu-dock@ubuntu.com
 
 
 # Qvevri installer
