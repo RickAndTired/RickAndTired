@@ -32,6 +32,8 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action minimize
 
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
+
 gsettings set org.gnome.nautilus.preferences show-create-link true
 
 gsettings set org.gnome.nautilus.preferences thumbnail-limit 1000 
