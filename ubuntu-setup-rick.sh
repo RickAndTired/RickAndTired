@@ -8,7 +8,11 @@ sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor pavucontr
 
 # apt or snap vlc inkscape gimp mumble
 
-#sudo snap install chromium obs-studio discord spotify gallery-dl kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
+#sudo snap install chromium obs-studio discord 
+#sudo snap install spotify gallery-dl kdenlive
+#sudo snap install foliate nyrna 
+#sudo snap install minetest openspades retroarch
+#sudo snap install tauon telegram-desktop
 
 # appimage - strawberry retroarch kdenlive slippi yuzu
 # none - MasterPDFEditor ventoy dolphin-emu lutris rnnoise/noisetorch ryujinx itch.io
