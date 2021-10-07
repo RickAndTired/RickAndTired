@@ -2,16 +2,16 @@
 
 sudo apt update
 
-sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor pavucontrol exfat-utils unrar htop wine conky lm-sensors steam-installer mesa-utils vulkan-tools python3-pip
+sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor pavucontrol exfat-utils unrar htop wine conky lm-sensors steam-installer mesa-utils vulkan-tools mypaint python3-pip
 
-# ubuntu-restricted-extras gufw p7zip-rar graphicsmagick gpodder gnome-boxes calibre gnome-sushi gnome-shell-extensions libopengl0 pdfarranger lutris peek mypaint
+# ubuntu-restricted-extras gufw p7zip-rar graphicsmagick gpodder gnome-boxes calibre gnome-sushi gnome-shell-extensions pdfarranger lutris peek libopengl0
 
 # apt or snap vlc inkscape gimp mumble
 
 #sudo snap install chromium obs-studio discord tauon spotify telegram-desktop minetest openspades retroarch gallery-dl kdenlive nyrna foliate
 
 # appimage - strawberry retroarch kdenlive slippi yuzu
-# none - MasterPDFEditor ventoy dolphin-emu lutris rnnoise/noisetorch ryujinx 
+# none - MasterPDFEditor ventoy dolphin-emu lutris rnnoise/noisetorch ryujinx itch.io
 
 sudo pip install --upgrade yt-dlp
 
