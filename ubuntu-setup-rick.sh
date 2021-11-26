@@ -2,7 +2,7 @@
 
 sudo apt update
 
-sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor pavucontrol exfat-utils unrar htop wine conky lm-sensors steam-installer mesa-utils vulkan-tools mypaint python3-pip
+sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor pavucontrol exfat-utils unrar htop wine conky lm-sensors steam-installer mesa-utils vulkan-tools mypaint python3-pip libegl1:i386
 
 # ubuntu-restricted-extras gufw p7zip-rar graphicsmagick gpodder gnome-boxes calibre gnome-sushi gnome-shell-extensions pdfarranger lutris peek libopengl0
 
