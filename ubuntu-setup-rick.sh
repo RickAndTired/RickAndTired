@@ -4,12 +4,12 @@ sudo apt update
 
 sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor pavucontrol exfat-utils unrar htop wine conky lm-sensors steam-installer mesa-utils vulkan-tools mypaint python3-pip libegl1:i386
 
-# ubuntu-restricted-extras gufw p7zip-rar graphicsmagick gpodder gnome-boxes calibre gnome-sushi gnome-shell-extensions pdfarranger lutris peek libopengl0
+# ubuntu-restricted-extras gufw p7zip-rar graphicsmagick gpodder gnome-boxes calibre gnome-sushi gnome-shell-extensions pdfarranger lutris peek libopengl0 cpupower-gui
 
 # apt or snap vlc inkscape gimp mumble
 
 # Snap chromium obs-studio discord spotify gallery-dl kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
-# appimage - strawberry retroarch kdenlive slippi yuzu
+# appimage - strawberry retroarch kdenlive slippi yuzu bottles stacer etcher
 # none - MasterPDFEditor ventoy dolphin-emu lutris rnnoise/noisetorch ryujinx itch.io
 
 sudo pip install --upgrade yt-dlp
@@ -70,6 +70,15 @@ gsettings set org.gnome.gedit.preferences.editor.scheme Yaru-dark
 #gnome-extensions disable desktop-icons@csoriano
 
 #gnome-extensions disable ubuntu-dock@ubuntu.com
+
+
+
+# NoiseTorch
+#wget https://github.com/lawl/NoiseTorch/releases/download/0.11.4/NoiseTorch_x64.tgz
+#tar -c $HOME -xzf NoiseTorch_x64.tgz
+#gtk-update-icon-cache
+#sudo setcap 'CAP_SYS_RESOURCE=+ep' ~/.local/bin/noisetorch
+
 
 
 # Qvevri installer
