@@ -12,7 +12,7 @@ sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor flatpak g
 # appimage - strawberry retroarch kdenlive slippi yuzu bottles stacer etcher
 # none - MasterPDFEditor ventoy dolphin-emu lutris rnnoise/noisetorch ryujinx itch.io
 
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 sudo pip install --upgrade yt-dlp
 
