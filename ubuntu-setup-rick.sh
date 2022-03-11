@@ -2,7 +2,7 @@
 
 sudo apt update
 
-sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor pavucontrol exfat-utils unrar htop wine conky lm-sensors steam-installer mesa-utils vulkan-tools mypaint python3-pip libegl1:i386
+sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfat-utils unrar htop wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint python3-pip libegl1:i386
 
 # ubuntu-restricted-extras gufw p7zip-rar graphicsmagick gpodder gnome-boxes calibre gnome-sushi gnome-shell-extensions pdfarranger lutris peek libopengl0 cpupower-gui
 
@@ -11,6 +11,8 @@ sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor pavucontr
 # Snap chromium obs-studio discord spotify gallery-dl kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
 # appimage - strawberry retroarch kdenlive slippi yuzu bottles stacer etcher
 # none - MasterPDFEditor ventoy dolphin-emu lutris rnnoise/noisetorch ryujinx itch.io
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 sudo pip install --upgrade yt-dlp
 
