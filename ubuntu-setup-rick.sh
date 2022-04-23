@@ -4,49 +4,59 @@ sudo apt update
 
 sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfat-utils unrar htop wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint python3-pip libegl1:i386
 
-# ubuntu-restricted-extras gufw p7zip-rar graphicsmagick gpodder gnome-boxes calibre gnome-sushi gnome-shell-extensions pdfarranger lutris peek libopengl0 cpupower-gui
+# ubuntu-restricted-extras gufw p7zip-rar graphicsmagick gimp mumble inkscape vlc virt-manager gnome-boxes calibre gnome-sushi gnome-shell-extensions pdfarranger lutris peek cpupower-gui spice-webdavd spice-vdagent gpodder
 
-# apt or snap vlc inkscape gimp mumble
-
-# Snap chromium obs-studio discord spotify gallery-dl kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
-# appimage - strawberry retroarch kdenlive slippi yuzu bottles stacer etcher
-# none - MasterPDFEditor ventoy dolphin-emu lutris rnnoise/noisetorch ryujinx itch.io
-
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# Snap - chromium obs-studio discord spotify gallery-dl kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
+# appimage - retroarch slippi yuzu stacer etcher
+# none - MasterPDFEditor ventoy lutris rnnoise/noisetorch itch.io
 
 sudo pip install --upgrade yt-dlp
 
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# sudo flatpak install flathub com.github.tchx84.Flatseal com.usebottles.bottles org.strawberrymusicplayer.strawberry com.discordapp.Discord com.heroicgameslauncher.hgl com.spotify.Client com.github.johnfactotum.Foliate com.obsproject.Studio org.kde.kdenlive org.signal.Signal org.chromium.Chromium org.mozilla.firefox org.videolan.VLC info.mumble.Mumble org.gnome.Boxes com.github.jeromerobert.pdfarranger org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.okular no.mifi.losslesscut com.makemkv.MakeMKV io.github.Soundux org.gnome.World.PikaBackup com.github.taiko2k.tauonmb org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.yuzu_emu.yuzu org.ryujinx.Ryujinx net.minetest.Minetest
+
+
+#gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
+
+##gsettings set org.gnome.settings-daemon.plugins.power power-button-action interactive
+
+#gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
+
+#gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
+# nothing or blank
+
+#gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type nothing
+# nothing or blank
 
 gsettings set org.gnome.mutter attach-modal-dialogs false
-
-gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
-
-#gsettings set org.gnome.settings-daemon.plugins.power power-button-action interactive
-
-gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
-
-gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
-# nothing or blank
-
-gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type nothing
-# nothing or blank
 
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action minimize
 
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 
+gsettings set org.gnome.shell.extensions.ding start-corner top-left
+
+gsettings set org.gnome.shell.extensions.ding show-home false
+
+gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
+
 gsettings set org.gnome.nautilus.preferences show-create-link true
+
+gsettings set org.gnome.nautilus.icon-view captions 
 
 gsettings set org.gnome.nautilus.preferences thumbnail-limit 1000 
 # (1GB)
 
-#gsettings set org.gnome.nautilus.preferences executable-text-activation ask
+##gsettings set org.gnome.nautilus.preferences executable-text-activation ask
 
-#gsettings set org.gnome.Terminal.Legacy.Keybindings copy "<Primary>c"
+##gsettings set org.gnome.Terminal.Legacy.Keybindings copy "<Primary>c"
 
-#gsettings set org.gnome.Terminal.Legacy.Keybindings paste "<Primary>v"
+##gsettings set org.gnome.Terminal.Legacy.Keybindings paste "<Primary>v"
 
-#gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend false
+##gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend false
+
+##gsettings set org.gnome.desktop.interface clock-format 12h
 
 gsettings set org.gnome.desktop.session idle-delay 0
 
@@ -56,15 +66,15 @@ gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
 
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 
-gsettings set org.gnome.desktop.interface clock-format 12h
+gsettings set org.gnome.desktop.interface clock-show-weekday true
+
+gsettings set org.gnome.desktop.interface clock-show-seconds true
+
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 gsettings set org.gnome.desktop.interface enable-hot-corners true
 
-gsettings set org.gnome.desktop.interface clock-show-weekday true
-
-gsettings set org.gnome.desktop.interface.gtk-theme Yaru-dark
-
-gsettings set org.gnome.gedit.preferences.editor.scheme Yaru-dark
+gsettings set com.ubuntu.update-notifier regular-auto-launch-interval 0
 
 
 #gnome-extensions disable ubuntu-appindicators@ubuntu.com
@@ -76,7 +86,7 @@ gsettings set org.gnome.gedit.preferences.editor.scheme Yaru-dark
 
 
 # NoiseTorch
-#wget https://github.com/lawl/NoiseTorch/releases/download/0.11.4/NoiseTorch_x64.tgz
+#wget https://github.com/lawl/NoiseTorch/releases/download/0.11.5/NoiseTorch_x64.tgz
 #tar -c $HOME -xzf NoiseTorch_x64.tgz
 #gtk-update-icon-cache
 #sudo setcap 'CAP_SYS_RESOURCE=+ep' ~/.local/bin/noisetorch
@@ -105,8 +115,8 @@ gsettings set org.gnome.gedit.preferences.editor.scheme Yaru-dark
 echo >> ~/.bashrc
 echo "# Alias" >> ~/.bashrc
 echo "alias gmode='gamemoded -r'" >> ~/.bashrc
-echo "alias ytup='sudo pip install --upgrade yt-dlp'" >> ~/.bashrc
 echo "alias yt='yt-dlp'" >> ~/.bashrc
+echo "alias ytup='sudo pip install --upgrade yt-dlp'" >> ~/.bashrc
 echo "alias ytmp3='yt-dlp -x --audio-format mp3'" >> ~/.bashrc
 echo "alias ytogg='yt-dlp -x --audio-format vorbis'" >> ~/.bashrc
 
@@ -120,9 +130,11 @@ echo Setup complete
 # Configurations via GUIs
 
 # Ubuntu dock
-# Firefox Files Gedit Calculator Gpodder Strawberry Discord Steam Qvevri System-Monitor Terminal
+# Firefox Files Gedit Calculator Strawberry Discord Steam Qvevri System-Monitor Terminal
 
 # Gnome Settings
+# Date & Time - AM/PM
+# Search - remove Files
 # Keyboard shortcut
 # gnome-system-monitor ctrl+shift+esc
 # xkill ctrl+shift+~
@@ -146,20 +158,12 @@ echo Setup complete
 # Gedit
 # Tab width 4 spaces
 
-# Celluloid
-# Always open new window
-# skip button for controlling playlist
-# gPodder
-# celluloid --mpv-options=--speed=2.0 %U
-
 # Inkscape
 # Symbolic Icons
 
-
 # Alsamixer
 # Automute - off
-
-# rnnoise mic suppression
+# auto start - amixer set -c1 Headphone unmute 100%
 
 # Pulse Audio Latency
 # Check current latency
@@ -169,9 +173,8 @@ echo Setup complete
 # default-fragments = 2
 # default-fragment-size-msec =25
 
-
 # OBS Settings
-# mkv - x264 - VBR - 50000 - CRF 15-22 - Keyframe 0 - CPU superfast/ultrafast
+# mkv - x264 - VBR - 30000 - CRF 22 - Keyframe 0 - CPU superfast
 # Audio 44.1khz - Video Lanczos - Advanced Color Space 709 - Color Range Partial
 
 # VLC
@@ -200,17 +203,7 @@ echo Setup complete
 # Allow Firefox to send backlogged crash reports - Enabled
 
 
-# /usr/share/applications/update-manager.desktop 
-# Name=Software Update
-# /usr/share/applications/software-properties-gtk.desktop
-# Name=Software Sources
-#sudo sed -i 's/Name=Software Updater/Name=Software Update/g' /usr/share/applications/update-manager.desktop
-#sudo sed -i 's/Name=Software & Updates/Name=Software Sources/g' /usr/share/applications/software-properties-gtk.desktop
-# Software Sources - Updates - display immediately
 
-# AMD ACO - add line to bottom
-# /etc/environment
-# RADV_PERFTEST=aco
 
 # Swap file
 #sudo swapoff -a
@@ -221,16 +214,10 @@ echo Setup complete
 #sudo nano /etc/fstab
 # /swap8 none swap sw 0 0
 
-#sudo ln -s /opt/RetroArch/retroarch /bin/retroarch
 
 # Qvevri
 # Enable left/right panel
 
-# Epic Game Store fix
-# -SkipBuildPatchPrereq -opengl
-
-# Dolphin fix
-#sudo ln -s /usr/lib/x86_64-linux-gnu/libsndio.so.7.0 /usr/lib/x86_64-linux-gnu/libsndio.so.6.1
 
 
 # Gnome Shell Applications
