@@ -19,7 +19,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 
 #gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
 
-#gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
+##gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
 # nothing or blank
 
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type nothing
