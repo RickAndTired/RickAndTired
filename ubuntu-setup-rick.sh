@@ -14,20 +14,20 @@ sudo pip install --upgrade yt-dlp
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# sudo flatpak install flathub com.github.tchx84.Flatseal com.usebottles.bottles org.strawberrymusicplayer.strawberry com.discordapp.Discord com.heroicgameslauncher.hgl com.spotify.Client com.github.johnfactotum.Foliate com.obsproject.Studio org.kde.kdenlive org.signal.Signal org.chromium.Chromium org.mozilla.firefox org.videolan.VLC info.mumble.Mumble org.gnome.Boxes com.github.jeromerobert.pdfarranger org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.okular no.mifi.losslesscut com.makemkv.MakeMKV io.github.Soundux org.gnome.World.PikaBackup com.github.taiko2k.tauonmb org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.yuzu_emu.yuzu org.ryujinx.Ryujinx net.minetest.Minetest
+# sudo flatpak install -y flathub com.github.tchx84.Flatseal com.usebottles.bottles org.strawberrymusicplayer.strawberry com.discordapp.Discord com.heroicgameslauncher.hgl com.spotify.Client com.github.johnfactotum.Foliate com.obsproject.Studio org.kde.kdenlive org.signal.Signal org.chromium.Chromium org.mozilla.firefox org.videolan.VLC info.mumble.Mumble org.gnome.Boxes com.github.jeromerobert.pdfarranger org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.okular no.mifi.losslesscut com.makemkv.MakeMKV io.github.Soundux org.gnome.World.PikaBackup com.github.taiko2k.tauonmb org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.yuzu_emu.yuzu org.ryujinx.Ryujinx net.minetest.Minetest
 
 
 #gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
 
-##gsettings set org.gnome.settings-daemon.plugins.power power-button-action interactive
-
-#gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
-
 #gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
 # nothing or blank
 
-#gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type nothing
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type nothing
 # nothing or blank
+
+gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
+
+gsettings set org.gnome.settings-daemon.plugins.power power-button-action nothing
 
 gsettings set org.gnome.mutter attach-modal-dialogs false
 
@@ -138,6 +138,7 @@ echo Setup complete
 # Keyboard shortcut
 # gnome-system-monitor ctrl+shift+esc
 # xkill ctrl+shift+~
+# systemctl suspend super+stop
 # Default Video player - Celluloid
 # Default Music player - Celluloid
 
