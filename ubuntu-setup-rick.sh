@@ -2,7 +2,7 @@
 
 sudo apt update
 
-sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfat-utils unrar htop wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint python3-pip libegl1:i386
+sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfatprogs unrar htop wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint python3-pip libegl1:i386
 
 # ubuntu-restricted-extras gufw p7zip-rar graphicsmagick gimp mumble inkscape vlc virt-manager gnome-boxes calibre gnome-sushi gnome-shell-extensions pdfarranger lutris peek cpupower-gui spice-webdavd spice-vdagent gpodder
 
@@ -88,7 +88,7 @@ gsettings set com.ubuntu.update-notifier regular-auto-launch-interval 0
 # NoiseTorch
 #wget https://github.com/lawl/NoiseTorch/releases/download/0.11.5/NoiseTorch_x64.tgz
 #tar -c $HOME -xzf NoiseTorch_x64.tgz
-#gtk-update-icon-cache
+#sudo gtk-update-icon-cache
 #sudo setcap 'CAP_SYS_RESOURCE=+ep' ~/.local/bin/noisetorch
 
 
