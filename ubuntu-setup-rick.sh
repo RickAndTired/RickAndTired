@@ -14,7 +14,7 @@ sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor flatpak g
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# sudo flatpak install -y flathub com.github.tchx84.Flatseal com.usebottles.bottles org.strawberrymusicplayer.strawberry com.discordapp.Discord com.heroicgameslauncher.hgl com.spotify.Client com.github.johnfactotum.Foliate com.obsproject.Studio org.kde.kdenlive org.signal.Signal org.chromium.Chromium org.mozilla.firefox org.videolan.VLC info.mumble.Mumble org.gnome.Boxes com.github.jeromerobert.pdfarranger org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.okular no.mifi.losslesscut com.makemkv.MakeMKV io.github.Soundux org.gnome.World.PikaBackup com.github.taiko2k.tauonmb org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.yuzu_emu.yuzu org.ryujinx.Ryujinx net.minetest.Minetest
+# sudo flatpak install -y flathub org.gtk.Gtk3theme.Yaru-Orange-dark com.github.tchx84.Flatseal com.usebottles.bottles org.strawberrymusicplayer.strawberry com.discordapp.Discord com.heroicgameslauncher.hgl com.spotify.Client com.github.johnfactotum.Foliate com.obsproject.Studio org.kde.kdenlive org.signal.Signal org.chromium.Chromium org.mozilla.firefox org.videolan.VLC info.mumble.Mumble org.gnome.Boxes com.github.jeromerobert.pdfarranger org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.okular no.mifi.losslesscut com.makemkv.MakeMKV io.github.Soundux org.gnome.World.PikaBackup com.github.taiko2k.tauonmb org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.yuzu_emu.yuzu org.ryujinx.Ryujinx net.minetest.Minetest
 
 
 #gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
@@ -42,8 +42,6 @@ gsettings set org.gnome.shell.extensions.ding show-home false
 gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
 
 gsettings set org.gnome.nautilus.preferences show-create-link true
-
-gsettings set org.gnome.nautilus.icon-view captions 
 
 gsettings set org.gnome.nautilus.preferences thumbnail-limit 1000 
 # (1GB)
@@ -87,8 +85,8 @@ gsettings set com.ubuntu.update-notifier regular-auto-launch-interval 0
 
 # NoiseTorch
 #wget https://github.com/lawl/NoiseTorch/releases/download/0.11.5/NoiseTorch_x64.tgz
-#tar -c $HOME -xzf NoiseTorch_x64.tgz
-#sudo gtk-update-icon-cache
+#tar -C $HOME -xzf NoiseTorch_x64.tgz
+#gtk-update-icon-cache
 #sudo setcap 'CAP_SYS_RESOURCE=+ep' ~/.local/bin/noisetorch
 
 
