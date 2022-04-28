@@ -202,8 +202,6 @@ echo Setup complete
 # Allow Firefox to send backlogged crash reports - Enabled
 
 
-
-
 # Swap file
 #sudo swapoff -a
 #sudo fallocate -l 8G /swap8
@@ -218,7 +216,6 @@ echo Setup complete
 # Enable left/right panel
 
 
-
 # Gnome Shell Applications
 # Accessories - Archive Manager, Calculator, Cheese, Document Scanner, Document Viewer, Files, Screenshot, Startup Disk Creator, System Monitor, Terminal, Text Editor
 # Games - Solitaire, Mahjongg, Mines, Minetest, Qvevri, Steam, Sudoku
@@ -228,3 +225,9 @@ echo Setup complete
 # Sound & Video - Celluloid, gPodder, mpv, OBS, Rhythmbox, Spotify, Strawberry, Videos, VLC
 # System - dconf Editor, Disk Usage, Disks, Extensions, Firewall, Pavucontrol, Settings, Software Sources, Software Updater, Startup Applications, Synaptic, Tweaks, Ubuntu Software
 # Useless - 
+
+
+# Rsync
+# rsync -avhP '/path/to/source/' '/path/to/destination/'
+# -navhP for test run
+# Drag and drop folder in terminal, but make sure to add the / at the end of each path
