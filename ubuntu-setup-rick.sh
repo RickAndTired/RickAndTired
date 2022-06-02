@@ -84,8 +84,8 @@ gsettings set com.ubuntu.update-notifier regular-auto-launch-interval 0
 
 
 # NoiseTorch
-#wget https://github.com/lawl/NoiseTorch/releases/download/0.11.5/NoiseTorch_x64.tgz
-#tar -C $HOME -xzf NoiseTorch_x64.tgz
+#wget https://github.com/noisetorch/NoiseTorch/releases/download/v0.12.0/NoiseTorch_x64_v0.12.0.tgz
+#tar -C $HOME -xzf NoiseTorch_x64_v0.12.0.tgz
 #gtk-update-icon-cache
 #sudo setcap 'CAP_SYS_RESOURCE=+ep' ~/.local/bin/noisetorch
 
