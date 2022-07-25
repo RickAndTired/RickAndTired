@@ -2,7 +2,7 @@
 
 sudo apt update
 
-sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfatprogs xfsprogs btrfs-progs unrar htop wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386
+sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfatprogs xfsprogs btrfs-progs unrar htop net-tools wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386
 
 # ubuntu-restricted-extras gufw p7zip-rar python3-pip yt-dlp graphicsmagick gimp mumble inkscape vlc virt-manager gnome-boxes calibre gnome-sushi gnome-shell-extensions pdfarranger lutris peek cpupower-gui spice-webdavd spice-vdagent gpodder
 
@@ -14,7 +14,7 @@ sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor flatpak g
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# sudo flatpak install -y flathub org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.usebottles.bottles org.strawberrymusicplayer.strawberry com.discordapp.Discord com.heroicgameslauncher.hgl com.spotify.Client com.github.johnfactotum.Foliate com.obsproject.Studio org.kde.kdenlive org.signal.Signal org.chromium.Chromium org.mozilla.firefox org.videolan.VLC info.mumble.Mumble org.gnome.Boxes com.github.jeromerobert.pdfarranger org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.okular no.mifi.losslesscut com.makemkv.MakeMKV io.github.Soundux org.gnome.World.PikaBackup com.github.taiko2k.tauonmb io.github.philipk.boilr org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.yuzu_emu.yuzu org.ryujinx.Ryujinx net.minetest.Minetest
+# sudo flatpak install -y flathub org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.usebottles.bottles org.strawberrymusicplayer.strawberry com.discordapp.Discord com.heroicgameslauncher.hgl com.spotify.Client com.github.johnfactotum.Foliate com.obsproject.Studio org.kde.kdenlive org.signal.Signal org.chromium.Chromium org.mozilla.firefox org.videolan.VLC info.mumble.Mumble org.gnome.Boxes com.github.jeromerobert.pdfarranger org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.okular no.mifi.losslesscut com.makemkv.MakeMKV io.github.Soundux org.gnome.World.PikaBackup com.github.taiko2k.tauonmb io.github.philipk.boilr com.steamgriddb.steam-rom-manager org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.yuzu_emu.yuzu org.ryujinx.Ryujinx net.minetest.Minetest
 
 
 #gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
@@ -185,7 +185,7 @@ echo Setup complete
 # Firefox
 # toolkit.tabbox.switchByScrolling;true
 # brower.tabs.tabMinWidth;50
-# gfx.webrender.all;true
+# browser.backspace_action;0
 # Ublock Origin, Privacy Badger, Bitwarden, Container tabs
 # Ctrl+Tab cycle recent - Disable
 # Always ask where to save files - Enable
@@ -210,6 +210,10 @@ echo Setup complete
 #sudo swapon /swap8
 #sudo nano /etc/fstab
 # /swap8 none swap sw 0 0
+
+
+# Nvidia
+#sudo ubuntu-drivers autoinstall
 
 
 # Qvevri
