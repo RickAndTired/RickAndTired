@@ -2,9 +2,9 @@
 
 sudo apt update
 
-sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfatprogs xfsprogs btrfs-progs unrar htop net-tools wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386
+sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfatprogs xfsprogs btrfs-progs unrar p7zip-rar htop net-tools wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386
 
-# ubuntu-restricted-extras gufw p7zip-rar python3-pip yt-dlp graphicsmagick gimp mumble inkscape vlc virt-manager gnome-boxes calibre gnome-sushi gnome-shell-extensions pdfarranger lutris peek cpupower-gui spice-webdavd spice-vdagent gpodder
+# ubuntu-restricted-extras gufw python3-pip yt-dlp graphicsmagick gimp mumble inkscape vlc virt-manager gnome-boxes calibre gnome-sushi gnome-shell-extensions pdfarranger lutris peek cpupower-gui spice-webdavd spice-vdagent gpodder
 
 # Snap - chromium obs-studio discord spotify gallery-dl kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
 # appimage - retroarch slippi yuzu stacer etcher
