@@ -7,7 +7,7 @@ sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor flatpak g
 # ubuntu-restricted-extras gufw python3-pip yt-dlp graphicsmagick gimp mumble inkscape vlc virt-manager gnome-boxes calibre gnome-sushi gnome-shell-extensions pdfarranger lutris peek cpupower-gui spice-webdavd spice-vdagent gpodder
 
 # Snap - chromium obs-studio discord spotify gallery-dl kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
-# appimage - retroarch slippi yuzu stacer etcher
+# appimage - retroarch slippi yuzu stacer etcher sunshine remoteplaywhatever upscayl
 # none - MasterPDFEditor ventoy lutris rnnoise/noisetorch itch.io
 
 # sudo pip install --upgrade yt-dlp
@@ -117,6 +117,7 @@ echo "alias yt='yt-dlp'" >> ~/.bashrc
 echo "alias ytup='sudo pip install --upgrade yt-dlp'" >> ~/.bashrc
 echo "alias ytmp3='yt-dlp -x --audio-format mp3'" >> ~/.bashrc
 echo "alias ytogg='yt-dlp -x --audio-format vorbis'" >> ~/.bashrc
+echo "alias gdl='/snap/bin/gallery-dl'" >> ~/.bashrc
 
 
 #sudo adduser $USER kvm
