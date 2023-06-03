@@ -4,7 +4,7 @@ sudo apt update
 
 sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfatprogs xfsprogs btrfs-progs unrar p7zip-rar htop net-tools wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386
 
-# gamescope libfuse2
+# gamescope libfuse2 virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system
 # ubuntu-restricted-extras gufw corectrl python3-pip yt-dlp graphicsmagick gimp mumble inkscape vlc virt-manager gnome-boxes calibre gnome-sushi gnome-shell-extensions pdfarranger lutris peek cpupower-gui spice-webdavd spice-vdagent gpodder fd-find input-remapper
 
 # Snap - chromium obs-studio discord steam spotify gallery-dl kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
@@ -113,7 +113,8 @@ gsettings set com.ubuntu.update-notifier regular-auto-launch-interval 0
 # Update within your-profile-folder/chrome/firefox-gnome-theme
 # git pull origin master
 
-
+# Max Map Count
+echo "vm.max_map_count=16777216" >> /etc/sysctl.d/80-gamecompatibility.conf
 
 # Bash Aliases
 echo >> ~/.bashrc
@@ -238,6 +239,8 @@ echo Setup complete
 # System - dconf Editor, Disk Usage, Disks, Extensions, Firewall, Pavucontrol, Settings, Software Sources, Software Updater, Startup Applications, Synaptic, Tweaks, Ubuntu Software
 # Useless - 
 
+# Macbook startup chime
+# sudo printf "\x07\x00\x00\x00\x00" > /sys/firmware/efi/efivars/SystemAudioVolume-7c436110-ab2a-4bbb-a880-fe41995c9f82
 
 # Rsync
 # rsync -avhP '/path/to/source/' '/path/to/destination/'
