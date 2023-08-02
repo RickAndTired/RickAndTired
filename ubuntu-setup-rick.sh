@@ -70,11 +70,11 @@ gsettings set org.gnome.desktop.interface clock-show-weekday true
 
 gsettings set org.gnome.desktop.interface clock-show-seconds true
 
-gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+##gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
-gsettings set org.gnome.desktop.interface gtk-theme Yaru-dark
+##gsettings set org.gnome.desktop.interface gtk-theme Yaru-dark
 
-gsettings set org.gnome.desktop.interface icon-theme Yaru-dark
+##gsettings set org.gnome.desktop.interface icon-theme Yaru-dark
 
 gsettings set org.gnome.desktop.interface enable-hot-corners true
 
@@ -114,7 +114,7 @@ gsettings set com.ubuntu.update-notifier regular-auto-launch-interval 0
 # git pull origin master
 
 # Max Map Count
-echo "vm.max_map_count=16777216" >> /etc/sysctl.d/80-gamecompatibility.conf
+sudo echo "vm.max_map_count=16777216" >> /etc/sysctl.d/80-gamecompatibility.conf
 
 # Bash Aliases
 echo >> ~/.bashrc
@@ -239,6 +239,14 @@ echo Setup complete
 # System - dconf Editor, Disk Usage, Disks, Extensions, Firewall, Pavucontrol, Settings, Software Sources, Software Updater, Startup Applications, Synaptic, Tweaks, Ubuntu Software
 # Useless - 
 
+# Portrait 1
+# xrandr --output HDMI-A-1 --primary --pos 0x1300 --output HDMI-A-0 --rotate left
+# Landscape 1
+# xrandr --output HDMI-A-1 --primary --pos 0x360 --output HDMI-A-0 --rotate normal
+# Landscape 2
+# xrandr --output HDMI-A-1 --pos 0x360 --output HDMI-A-0 --primary --rotate normal
+
+
 # Macbook startup chime
 # sudo printf "\x07\x00\x00\x00\x00" > /sys/firmware/efi/efivars/SystemAudioVolume-7c436110-ab2a-4bbb-a880-fe41995c9f82
 
@@ -246,3 +254,10 @@ echo Setup complete
 # rsync -avhP '/path/to/source/' '/path/to/destination/'
 # -navhP for test run
 # Drag and drop folder in terminal, but make sure to add the / at the end of each path
+
+# Updated video drivers
+# sudo add-apt-repository ppa:kisak/kisak-mesa
+# sudo apt update
+# Uninstall
+# sudo apt install ppa-purge
+# sudo ppa-purge ppa:kisak/kisak-mesa
