@@ -2,10 +2,10 @@
 
 sudo apt update
 
-sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfatprogs xfsprogs btrfs-progs unrar p7zip-rar htop net-tools wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386
+sudo apt install -y synaptic micro nnn fd-find celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfatprogs xfsprogs btrfs-progs unrar p7zip-rar htop net-tools wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper
 
 # gamescope libfuse2 virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system
-# ubuntu-restricted-extras gufw corectrl python3-pip yt-dlp graphicsmagick gimp mumble inkscape vlc virt-manager gnome-boxes calibre gnome-sushi gnome-shell-extensions pdfarranger lutris peek cpupower-gui spice-webdavd spice-vdagent gpodder fd-find input-remapper
+# ubuntu-restricted-extras gufw corectrl yt-dlp graphicsmagick gimp mumble inkscape vlc virt-manager gnome-boxes spice-webdavd spice-vdagent calibre gnome-sushi gnome-shell-extensions gnome-shell-extension-gsconnect pdfarranger lutris peek cpupower-gui gpodder stacer bashtop uget menulibre glances magic-wormhole
 
 # Snap - chromium obs-studio discord steam spotify gallery-dl kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
 # appimage - retroarch slippi yuzu stacer etcher sunshine remoteplaywhatever upscayl
@@ -15,7 +15,7 @@ sudo apt install -y synaptic micro celluloid gnome-tweaks dconf-editor flatpak g
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# sudo flatpak install -y flathub org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.usebottles.bottles org.strawberrymusicplayer.strawberry com.discordapp.Discord org.rncbc.qpwgraph com.github.wwmm.easyeffects com.heroicgameslauncher.hgl dev.lizardbyte.app.Sunshine org.upscayl.Upscayl com.spotify.Client com.github.johnfactotum.Foliate com.obsproject.Studio org.kde.kdenlive org.signal.Signal org.chromium.Chromium org.mozilla.firefox org.videolan.VLC info.mumble.Mumble org.gnome.Boxes com.github.jeromerobert.pdfarranger org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.okular no.mifi.losslesscut com.makemkv.MakeMKV io.github.Soundux org.gnome.World.PikaBackup com.github.taiko2k.tauonmb io.github.philipk.boilr com.steamgriddb.steam-rom-manager org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.yuzu_emu.yuzu org.ryujinx.Ryujinx net.minetest.Minetest 
+# sudo flatpak install -y flathub org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.usebottles.bottles org.strawberrymusicplayer.strawberry com.discordapp.Discord org.rncbc.qpwgraph com.github.wwmm.easyeffects com.heroicgameslauncher.hgl dev.lizardbyte.app.Sunshine org.upscayl.Upscayl com.spotify.Client com.github.johnfactotum.Foliate com.obsproject.Studio org.kde.kdenlive org.signal.Signal org.chromium.Chromium org.mozilla.firefox org.videolan.VLC info.mumble.Mumble org.gnome.Boxes com.github.jeromerobert.pdfarranger org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.okular no.mifi.losslesscut com.makemkv.MakeMKV io.github.Soundux org.gnome.World.PikaBackup com.github.taiko2k.tauonmb io.github.philipk.boilr com.steamgriddb.steam-rom-manager org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.yuzu_emu.yuzu org.ryujinx.Ryujinx net.minetest.Minetest com.moonlight_stream.Moonlight
 #org.pipewire.Helvum com.github.hugolabe.Wike io.github.nate_xyz.Conjure com.github.neithern.g4music
 
 
@@ -126,6 +126,13 @@ echo "alias ytmp3='yt-dlp -x --audio-format mp3'" >> ~/.bashrc
 echo "alias ytogg='yt-dlp -x --audio-format vorbis'" >> ~/.bashrc
 echo "alias gdl='/snap/bin/gallery-dl'" >> ~/.bashrc
 echo "alias rsy='rsync -avhP'" >> ~/.bashrc
+echo "alias p1='xrandr --output HDMI-A-0 --pos 1440x1300 --output DisplayPort-0 --rotate left'" >> ~/.bashrc
+echo "alias l1='xrandr --output HDMI-A-0 --pos 2560x290 --output DisplayPort-0 --rotate normal'" >> ~/.bashrc
+echo "alias 60fps='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 59.95'" >> ~/.bashrc
+echo "alias 75fps='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 74.97'" >> ~/.bashrc
+echo "alias tsup='sudo tailscale up'" >> ~/.bashrc
+echo "alias tsdown='sudo tailscale down'" >> ~/.bashrc
+# alias GAMEBU="7z a '/home/rick/Documents/Link to Documents/Games/Saves/GAME FOLDER/'$(date +"%Y-%m-%d-%s")-GAMENAME.7z '/PATH/TO/FILE.SAV'"
 
 
 #sudo adduser $USER kvm
