@@ -12,8 +12,8 @@ conky.config = {
   draw_shades = false,
   use_xft = true,
   font = 'DejaVu Sans Mono:size=10',
-  gap_x = -1900,
-  gap_y = 20,
+  gap_x = -1910,
+  gap_y = 300, 
   maximum_width = 220,
   minimum_height = 5,
   minimum_width = 5,
@@ -38,20 +38,42 @@ conky.config = {
 }
 
 conky.text = [[
+Alt positions
+Landscape Acer top right
+  gap_x = -1895,
+  gap_y = 20,
+Portrait Asus top right
+  gap_x = -1425,
+  gap_y = -1300,
+Landscape Asus top left
+  gap_x = -225,
+  gap_y = -350, 
+Landscape Acer top left
+  gap_x = 4275,
+  gap_y = 360,
+Landscape Acer top right v2
+  gap_x = 20,
+  gap_y = 30, 
+Landscape Acer top right v3  
+  gap_x = -1910,
+  gap_y = 225,
+]]
+
+conky.text = [[
   ${font monospace:size=29}${alignc}${time %I:%M:%S}${font}
   
   ${font monospace:bold:size=12}${alignc}${time %a | %d %b | %Y}
-  
+
 # Sector 3: "Battery"
 # ${font monospace:bold:size=12}Battery: $alignr ${battery}
 # ${battery_bar BAT1}
 # ${font monospace:normal:size=8}Uptime:$alignr$uptime 
 # Sector 4: "CPU", Core Frequency, Core temp, CPU1,2,3,&4 gauge
-  ${font monospace:bold:size=12}AMD Ryzen 5 2600 ${hr 2}
+  ${font monospace:bold:size=12}AMD Ryzen 5 5600G ${hr 2}
   ${font monospace:bold:size=8}${cpugraph cpu0 FFFFFF FFFFFF}
   ${font monospace:normal:size=8}Core frequency $color $alignr ${freq_g (1)} GHz
   # Core 1 temp: $alignr ${hwmon 0 temp 1} C
-CPU: ${execi 60 sensors | grep Tdie | cut -c 16-19}C $alignr GPU: ${execi 60 sensors | grep edge | cut -c 16-19}C
+CPU: ${execi 60 sensors | grep Tctl | cut -c 16-19}C $alignr GPU: ${execi 60 sensors | grep edge | cut -c 16-19}C
 
 # Not sure what these temps are
 # What1: ${hwmon 2 temp 1}C
@@ -72,10 +94,10 @@ CPU: ${execi 60 sensors | grep Tdie | cut -c 16-19}C $alignr GPU: ${execi 60 sen
 
 
 # Sector 5: "HDD & RAM", RAM use gauge, HDD use gauge
-  ${font monospace:bold:size=12}HDD & RAM ${hr 2}
+  ${font monospace:bold:size=12}SSD & RAM ${hr 2}
  ${font monospace:normal:size=8}SSD $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
   ${fs_bar /}
-  ${font monospace:normal:size=8}HDD $alignc ${fs_used /mnt/data} / ${fs_size /mnt/data} $alignr ${fs_used_perc /mnt/data}%
+  ${font monospace:normal:size=8}Data $alignc ${fs_used /mnt/data} / ${fs_size /mnt/data} $alignr ${fs_used_perc /mnt/data}%
   ${fs_bar /mnt/data}
   ${font monospace:normal:size=8}RAM $alignc $mem / $memmax $alignr $memperc%
   $membar 
@@ -83,19 +105,19 @@ CPU: ${execi 60 sensors | grep Tdie | cut -c 16-19}C $alignr GPU: ${execi 60 sen
   $swapbar
   ${font monospace:normal:size=8}Disk IO SSD: $font$alignr${diskio sda2}
   ${diskiograph sda2}
-  ${font monospace:normal:size=8}Disk IO HDD: $font$alignr${diskio sdb1}
-  ${diskiograph sdb1}
+  ${font monospace:normal:size=8}Disk IO Data: $font$alignr${diskio /dev/nvme0n1p1}
+  ${diskiograph /dev/nvme0n1p1}
 
 # Sector 6: "Network", Wi-Fi ID, Signal, IP address, Upload/Download graph
   ${font monospace:bold:size=12}NETWORK ${hr 2}
 # ${font monospace:normal:size=8}ID:$alignr${wireless_essid wlan0}
 # Signal: $alignr ${wireless_link_qual_perc wlan0}%
-# IP address: $alignr ${addr enp4s0}
-  ${downspeedgraph enp4s0}
- ${font monospace:normal:size=8}Down:(${totaldown enp4s0}) $alignr${downspeed enp4s0}/s
-  ${font monospace:normal:size=8}Up:  (${totalup enp4s0}) $alignr${upspeed enp4s0}/s
-# ${upspeedgraph enp4s0}
-# ${font monospace:normal:size=8}Up:       (Tot: ${totalup enp4s0}) $alignr ${upspeed enp4s0}/s
+# IP address: $alignr ${addr enp7s0}
+  ${downspeedgraph enp7s0}
+ ${font monospace:normal:size=8}Down:(${totaldown enp7s0}) $alignr${downspeed enp7s0}/s
+  ${font monospace:normal:size=8}Up:  (${totalup enp7s0}) $alignr${upspeed enp7s0}/s
+# ${upspeedgraph enp7s0}
+# ${font monospace:normal:size=8}Up:       (Tot: ${totalup enp7s0}) $alignr ${upspeed enp7s0}/s
  
 # Sector 7: "Top Processes"
   ${font monospace:bold:size=12}TOP PROCESSES ${hr 2}
