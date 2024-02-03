@@ -2,12 +2,14 @@
 
 sudo apt update
 
-sudo apt install -y synaptic micro nnn fd-find celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfatprogs xfsprogs btrfs-progs f2fs-tools unrar p7zip-rar htop net-tools wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper easyeffects strawberry qt5-style-plugins smartmontools
+sudo apt install -y synaptic micro nnn fd-find celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfatprogs xfsprogs btrfs-progs f2fs-tools unrar p7zip-rar htop net-tools wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry qt5-style-plugins smartmontools vkbasalt goverlay
 
 # gamescope libfuse2 virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system
-# ubuntu-restricted-extras gufw corectrl yt-dlp graphicsmagick gimp mumble inkscape vlc virt-manager gnome-boxes spice-webdavd spice-vdagent calibre gnome-sushi gnome-shell-extensions gnome-shell-extension-gsconnect pdfarranger lutris peek cpupower-gui gpodder stacer bashtop uget menulibre glances magic-wormhole minetest minetest-server wike vorta
+# ubuntu-restricted-extras gufw corectrl yt-dlp graphicsmagick gimp mumble audacity inkscape vlc virt-manager gnome-boxes spice-webdavd spice-vdagent calibre gnome-sushi gnome-shell-extensions gnome-shell-extension-gsconnect pdfarranger lutris peek cpupower-gui gpodder stacer bashtop uget menulibre glances magic-wormhole minetest minetest-server wike vorta easyeffects obs-studio mangohud
 # virt-manager suggested:
 # gstreamer1.0-plugins-bad libvirt-clients-qemu libvirt-login-shell libvirt-daemon-driver-storage-gluster libvirt-daemon-driver-storage-iscsi-direct libvirt-daemon-driver-storage-rbd libvirt-daemon-driver-storage-zfs libvirt-daemon-driver-lxc libvirt-daemon-driver-vbox libvirt-daemon-driver-xen numad auditd nfs-common open-iscsi pm-utils systemtap zfsutils trousers python3-guestfs ssh-askpass python3-argcomplete
+# steam-installer suggested
+# libudev0 gtk2-engines-pixbuf:i386 libgtk2.0-0:i386 libudev0:i386 pipewire:i386
 
 # Snap - chromium obs-studio discord steam spotify gallery-dl kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
 # appimage - retroarch slippi yuzu stacer etcher sunshine remoteplaywhatever upscayl
@@ -17,9 +19,10 @@ sudo apt install -y synaptic micro nnn fd-find celluloid gnome-tweaks dconf-edit
 
 #sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# sudo flatpak install -y com.github.tchx84.Flatseal com.discordapp.Discord org.gnome.World.PikaBackup
+# sudo flatpak install -y com.github.tchx84.Flatseal com.discordapp.Discord com.github.wwmm.easyeffects org.gnome.World.PikaBackup
 # sudo flatpak install -y flathub org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.usebottles.bottles org.strawberrymusicplayer.strawberry com.discordapp.Discord org.rncbc.qpwgraph com.github.wwmm.easyeffects com.heroicgameslauncher.hgl dev.lizardbyte.app.Sunshine org.upscayl.Upscayl com.spotify.Client com.github.johnfactotum.Foliate com.obsproject.Studio org.kde.kdenlive org.signal.Signal org.chromium.Chromium org.mozilla.firefox org.videolan.VLC info.mumble.Mumble org.gnome.Boxes com.github.jeromerobert.pdfarranger org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.okular no.mifi.losslesscut com.makemkv.MakeMKV io.github.Soundux org.gnome.World.PikaBackup com.github.taiko2k.tauonmb io.github.philipk.boilr com.steamgriddb.steam-rom-manager org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.yuzu_emu.yuzu org.ryujinx.Ryujinx net.minetest.Minetest com.moonlight_stream.Moonlight
 #org.pipewire.Helvum com.github.hugolabe.Wike io.github.nate_xyz.Conjure com.github.neithern.g4music
+# vkbasalt mangohud
 
 
 #gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
@@ -121,6 +124,7 @@ gsettings set com.ubuntu.update-notifier regular-auto-launch-interval 0
 # git pull origin master
 
 # Max Map Count
+# check current $ cat /proc/sys/vm/max_map_count
 sudo echo "vm.max_map_count=16777216" >> /etc/sysctl.d/80-gamecompatibility.conf
 
 # Bash Aliases
@@ -128,6 +132,7 @@ echo >> ~/.bashrc
 echo "# Alias" >> ~/.bashrc
 #echo "alias gmode='gamemoded -r'" >> ~/.bashrc
 echo "alias yt='yt-dlp'" >> ~/.bashrc
+echo "alias yt720='yt-dlp -f \"bestvideo[height<=800]+bestaudio/best[height<=800]\"'" >> ~/.bashrc
 #echo "alias ytup='sudo pip install --upgrade yt-dlp'" >> ~/.bashrc
 echo "alias ytmp3='yt-dlp -x --audio-format mp3'" >> ~/.bashrc
 echo "alias ytogg='yt-dlp -x --audio-format vorbis'" >> ~/.bashrc
@@ -279,3 +284,7 @@ echo Setup complete
 
 # Steam Snap
 # snap connect steam:removable-media
+
+# Setup a command to not need password
+# $ sudo visudo -f /etc/sudoers.d/customizations
+# %sudo ALL=NOPASSWD: /path/to/command/command.sh
