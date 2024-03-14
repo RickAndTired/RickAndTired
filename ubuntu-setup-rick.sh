@@ -4,25 +4,26 @@ sudo apt update
 
 sudo apt install -y synaptic micro nnn fd-find celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfatprogs xfsprogs btrfs-progs f2fs-tools unrar p7zip-rar htop net-tools wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry qt5-style-plugins smartmontools vkbasalt goverlay
 
-# gamescope libfuse2 virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system
-# ubuntu-restricted-extras gufw corectrl yt-dlp graphicsmagick gimp mumble audacity inkscape vlc virt-manager gnome-boxes spice-webdavd spice-vdagent calibre gnome-sushi gnome-shell-extensions gnome-shell-extension-gsconnect pdfarranger lutris peek cpupower-gui gpodder stacer bashtop uget menulibre glances magic-wormhole minetest minetest-server wike vorta easyeffects obs-studio mangohud
+# gnome-sushi gufw mangohud corectrl yt-dlp graphicsmagick gimp mumble audacity inkscape vlc calibre pdfarranger minetest minetest-server wike vorta easyeffects gamescope libfuse2 virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system
+# ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect virt-manager gnome-boxes spice-webdavd spice-vdagent peek cpupower-gui gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio 
 # virt-manager suggested:
 # gstreamer1.0-plugins-bad libvirt-clients-qemu libvirt-login-shell libvirt-daemon-driver-storage-gluster libvirt-daemon-driver-storage-iscsi-direct libvirt-daemon-driver-storage-rbd libvirt-daemon-driver-storage-zfs libvirt-daemon-driver-lxc libvirt-daemon-driver-vbox libvirt-daemon-driver-xen numad auditd nfs-common open-iscsi pm-utils systemtap zfsutils trousers python3-guestfs ssh-askpass python3-argcomplete
 # steam-installer suggested
 # libudev0 gtk2-engines-pixbuf:i386 libgtk2.0-0:i386 libudev0:i386 pipewire:i386
 
+# AppImage - retroarch slippi yuzu stacer etcher sunshine upscayl ESDE remoteplaywhatever ALVR avidemux inkscape losslesscut pix
 # Snap - chromium obs-studio discord steam spotify gallery-dl kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
-# appimage - retroarch slippi yuzu stacer etcher sunshine remoteplaywhatever upscayl
-# none - MasterPDFEditor ventoy lutris rnnoise/noisetorch itch.io
+# none - GW2Switcheroo MasterPDFEditor ventoy lutris rnnoise/noisetorch itch.io sidequest tailscale ryujinx Unigine_Superposition 
 
 # sudo pip install --upgrade yt-dlp
 
 #sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# sudo flatpak install -y com.github.tchx84.Flatseal com.discordapp.Discord com.github.wwmm.easyeffects org.gnome.World.PikaBackup
+# sudo flatpak install -y com.github.tchx84.Flatseal com.discordapp.Discord com.obsproject.Studio runtime/org.freedesktop.Platform.GStreamer.gstreamer-vaapi/x86_64/22.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08
+
 # sudo flatpak install -y flathub org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.usebottles.bottles org.strawberrymusicplayer.strawberry com.discordapp.Discord org.rncbc.qpwgraph com.github.wwmm.easyeffects com.heroicgameslauncher.hgl dev.lizardbyte.app.Sunshine org.upscayl.Upscayl com.spotify.Client com.github.johnfactotum.Foliate com.obsproject.Studio org.kde.kdenlive org.signal.Signal org.chromium.Chromium org.mozilla.firefox org.videolan.VLC info.mumble.Mumble org.gnome.Boxes com.github.jeromerobert.pdfarranger org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.okular no.mifi.losslesscut com.makemkv.MakeMKV io.github.Soundux org.gnome.World.PikaBackup com.github.taiko2k.tauonmb io.github.philipk.boilr com.steamgriddb.steam-rom-manager org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.yuzu_emu.yuzu org.ryujinx.Ryujinx net.minetest.Minetest com.moonlight_stream.Moonlight
 #org.pipewire.Helvum com.github.hugolabe.Wike io.github.nate_xyz.Conjure com.github.neithern.g4music
-# vkbasalt mangohud
+# vkbasalt mangohud com.obsproject.Studio.Plugin.Gstreamer?
 
 
 #gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
@@ -123,9 +124,7 @@ gsettings set com.ubuntu.update-notifier regular-auto-launch-interval 0
 # Update within your-profile-folder/chrome/firefox-gnome-theme
 # git pull origin master
 
-# Max Map Count
-# check current $ cat /proc/sys/vm/max_map_count
-sudo echo "vm.max_map_count=16777216" >> /etc/sysctl.d/80-gamecompatibility.conf
+
 
 # Bash Aliases
 echo >> ~/.bashrc
@@ -143,8 +142,11 @@ echo "alias l1='xrandr --output HDMI-A-0 --pos 2560x290 --output DisplayPort-0 -
 echo "alias 60fps='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 59.95' && echo >> ~/.conkyrc" >> ~/.bashrc
 echo "alias 75fps='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 74.97' && echo >> ~/.conkyrc" >> ~/.bashrc
 echo "#alias tsup='sudo tailscale up'" >> ~/.bashrc
-echo "alias tsup='sudo ~/Downloads/Apps/tailscale/tailscaled --state=tailscaled.state'"
-echo "alias tsdown='sudo tailscale down'" >> ~/.bashrc
+echo "#alias tsup='sudo ~/Downloads/Apps/tailscale/tailscaled --state=tailscaled.state'" >> ~/.bashrc
+echo "#alias tsdown='sudo tailscale down'" >> ~/.bashrc
+echo alias ecry='ecryptfs-mount-private' >> ~/.bashrc
+echo alias proton1='sudo gnome-text-editor /etc/sysctl.conf' >> ~/.bashrc
+echo alias proton2='sudo sysctl -p' >> ~/.bashrc
 # alias GAMEBU="7z a '/home/rick/Documents/Link to Documents/Games/Saves/GAME FOLDER/'$(date +"%Y-%m-%d-%s")-GAMENAME.7z '/PATH/TO/FILE.SAV'"
 
 
@@ -177,6 +179,11 @@ echo Setup complete
 # Built-in schemes - Tango dark
 # Shortcuts
 # Ctrl+C and Ctrl+V for Copy and Paste
+
+# Max Map Count
+# check current $ cat /proc/sys/vm/max_map_count
+# sudo echo "vm.max_map_count=16777216" >> /etc/sysctl.d/80-gamecompatibility.conf
+# permission denied - need to manually do this
 
 # Files bookmarks
 # data share steamapps Games Temp
