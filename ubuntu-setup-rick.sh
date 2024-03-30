@@ -5,7 +5,7 @@ sudo apt update
 sudo apt install -y synaptic micro nnn fd-find celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfatprogs xfsprogs btrfs-progs f2fs-tools unrar p7zip-rar htop net-tools wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry qt5-style-plugins smartmontools vkbasalt goverlay
 
 # gnome-sushi gufw mangohud corectrl yt-dlp graphicsmagick gimp mumble audacity inkscape vlc calibre pdfarranger minetest minetest-server wike vorta easyeffects gamescope libfuse2 virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system
-# ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect virt-manager gnome-boxes spice-webdavd spice-vdagent peek cpupower-gui gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio 
+# ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect virt-manager gnome-boxes spice-webdavd spice-vdagent peek cpupower-gui gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio ocrmypdf
 # virt-manager suggested:
 # gstreamer1.0-plugins-bad libvirt-clients-qemu libvirt-login-shell libvirt-daemon-driver-storage-gluster libvirt-daemon-driver-storage-iscsi-direct libvirt-daemon-driver-storage-rbd libvirt-daemon-driver-storage-zfs libvirt-daemon-driver-lxc libvirt-daemon-driver-vbox libvirt-daemon-driver-xen numad auditd nfs-common open-iscsi pm-utils systemtap zfsutils trousers python3-guestfs ssh-askpass python3-argcomplete
 # steam-installer suggested
@@ -137,10 +137,15 @@ echo "alias ytmp3='yt-dlp -x --audio-format mp3'" >> ~/.bashrc
 echo "alias ytogg='yt-dlp -x --audio-format vorbis'" >> ~/.bashrc
 echo "alias gdl='/snap/bin/gallery-dl'" >> ~/.bashrc
 echo "alias rsy='rsync -avhP'" >> ~/.bashrc
-echo "alias p1='xrandr --output HDMI-A-0 --pos 1440x1300 --output DisplayPort-0 --rotate left'" >> ~/.bashrc
-echo "alias l1='xrandr --output HDMI-A-0 --pos 2560x290 --output DisplayPort-0 --rotate normal'" >> ~/.bashrc
-echo "alias 60fps='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 59.95' && echo >> ~/.conkyrc" >> ~/.bashrc
-echo "alias 75fps='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 74.97' && echo >> ~/.conkyrc" >> ~/.bashrc
+echo "alias asusp1='xrandr --output HDMI-A-0 --pos 1440x1300 --output DisplayPort-0 --rotate left'" >> ~/.bashrc
+echo "alias asusl1='xrandr --output HDMI-A-0 --pos 2560x290 --output DisplayPort-0 --rotate normal'" >> ~/.bashrc
+echo "alias p1='xrandr --output HDMI-A-0 --pos 1080x750 --output DisplayPort-0 --rotate right'" >> ~/.bashrc
+echo "alias l1='xrandr --output HDMI-A-0 --pos 1920x0 --output DisplayPort-0 --rotate normal'" >> ~/.bashrc
+echo "alias asus60fps='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 59.95' && echo >> ~/.conkyrc" >> ~/.bashrc
+echo "alias asus75fps='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 74.97' && echo >> ~/.conkyrc" >> ~/.bashrc
+echo "alias 60fps='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 60.00' && echo >> ~/.conkyrc" >> ~/.bashrc
+echo "alias 120fps='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120.00' && echo >> ~/.conkyrc" >> ~/.bashrc
+echo "alias 144fps='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 143.99' && echo >> ~/.conkyrc" >> ~/.bashrc
 echo "#alias tsup='sudo tailscale up'" >> ~/.bashrc
 echo "#alias tsup='sudo ~/Downloads/Apps/tailscale/tailscaled --state=tailscaled.state'" >> ~/.bashrc
 echo "#alias tsdown='sudo tailscale down'" >> ~/.bashrc
