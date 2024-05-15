@@ -1,16 +1,17 @@
 autoinstall:
 
-    version: 1
-    
+    version: 0.1
+
     identity:
         hostname: hostname
         username: username
-        password: 'password' 
+        password: '$1$9yB2vTbd$F5HNQwdQmXmmWJKs00X960' 
+        #password
         #generate password hash with '$openssl passwd' OR '$mkpasswd'
         
-    #snaps:
-        #- name: chromium
-        #- name: gallery-dl
+    snaps:
+        - name: chromium
+        - name: gallery-dl
         
     packages:
         - synaptic
