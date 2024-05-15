@@ -1,0 +1,97 @@
+autoinstall:
+
+    version: 0.1
+
+    Identity:
+        hostname: hostname
+        username: username
+        password: 'password' 
+        #generate password hash with '$openssl passwd' OR '$mkpasswd'
+        
+    snaps:
+        - name: chromium
+        - name: gallery-dl
+        
+    packages:
+        - synaptic
+        - micro
+        - nnn
+        - fd-find
+        - celluloid
+        - gnome-tweaks
+        - dconf-editor
+        
+    user-data:
+        runcmd:
+            - sudo -u username gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
+            - sudo -u username gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
+            - sudo -u username gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type nothing
+            - sudo -u username gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
+            #- sudo -u username gsettings set org.gnome.settings-daemon.plugins.power power-button-action nothing
+            - sudo -u username gsettings set org.gnome.mutter attach-modal-dialogs false
+            - sudo -u username gsettings set org.gnome.shell.extensions.dash-to-dock click-action focus-minimize-or-appspread
+            #minimize or focus-minimize-or-appspread
+            - sudo -u username gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
+            - sudo -u username gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 40
+            - sudo -u username gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
+            #- sudo -u username gsettings set org.gnome.shell.extensions.ding start-corner top-left
+            - sudo -u username gsettings set org.gnome.shell.extensions.ding show-home false
+            - sudo -u username gsettings set org.gnome.nautilus.preferences show-create-link true
+            - sudo -u username gsettings set org.gnome.nautilus.preferences thumbnail-limit 1000 
+            # (1GB)
+
+            #- sudo -u username gsettings set org.gnome.Terminal.Legacy.Keybindings copy "<Control>c"
+            #- sudo -u username gsettings set org.gnome.Terminal.Legacy.Keybindings paste "<Control>v"
+            #- sudo -u username gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend false
+
+            - sudo -u username gsettings set org.gnome.desktop.session idle-delay 0
+            - sudo -u username gsettings set org.gnome.desktop.screensaver lock-delay 5
+            - sudo -u username gsettings set org.gnome.desktop.privacy remember-recent-files false
+            - sudo -u username gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
+            - sudo -u username gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
+            - sudo -u username gsettings set org.gnome.desktop.interface clock-show-weekday true
+            - sudo -u username gsettings set org.gnome.desktop.interface clock-show-weekdate true
+            - sudo -u username gsettings set org.gnome.desktop.interface clock-show-seconds true
+            - sudo -u username gsettings set org.gnome.desktop.interface clock-format 12h
+            - sudo -u username gsettings set org.gnome.desktop.interface overlay-scrolling false
+            - sudo -u username gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+            - sudo -u username gsettings set org.gnome.desktop.interface gtk-theme Yaru-dark
+            #- sudo -u username gsettings set org.gnome.desktop.interface icon-theme Yaru-dark
+            - sudo -u username gsettings set org.gnome.desktop.interface enable-hot-corners true
+
+            - sudo -u username gsettings set com.ubuntu.update-notifier regular-auto-launch-interval 0
+
+            - echo >> /home/username/.bashrc 
+            - echo "# Alias" >> /home/username/.bashrc
+            - echo "#alias gmode='gamemoded -r'" >> /home/username/.bashrc
+            - echo "alias yt='yt-dlp'" >> /home/username/.bashrc
+            - echo "alias yt720='yt-dlp -f \"bestvideo[height<=800]+bestaudio/best[height<=800]\"'" >> /home/username/.bashrc
+            - echo "#alias ytup='sudo pip install --upgrade yt-dlp'" >> /home/username/.bashrc
+            - echo "alias ytmp3='yt-dlp -x --audio-format mp3'" >> /home/username/.bashrc
+            - echo "alias ytogg='yt-dlp -x --audio-format vorbis'" >> /home/username/.bashrc
+            - echo "alias gdl='/snap/bin/gallery-dl'" >> /home/username/.bashrc
+            - echo "alias rsy='rsync -avhP'" >> /home/username/.bashrc
+            - echo "alias asusp1='xrandr --output HDMI-A-0 --pos 1440x1300 --output DisplayPort-0 --rotate left'" >> /home/username/.bashrc
+            - echo "alias asusl1='xrandr --output HDMI-A-0 --pos 2560x290 --output DisplayPort-0 --rotate normal'" >> /home/username/.bashrc
+            - echo "alias p1='xrandr --output HDMI-A-0 --pos 1080x750 --output DisplayPort-0 --rotate right'" >> /home/username/.bashrc
+            - echo "alias l1='xrandr --output HDMI-A-0 --pos 1920x0 --output DisplayPort-0 --rotate normal'" >> /home/username/.bashrc
+            - echo "alias asus60hz='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 59.95' && echo >> /home/username/.conkyrc" >> /home/username/.bashrc
+            - echo "alias asus75hz='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 74.97' && echo >> /home/username/.conkyrc" >> /home/username/.bashrc
+            - echo "alias 60hz='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 60.00 && echo >> /home/username/.conkyrc'" >> /home/username/.bashrc
+            - echo "alias 120hz='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120.00 && echo >> /home/username/.conkyrc'" >> /home/username/.bashrc
+            - echo "alias 144hz='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 143.99 && echo >> /home/username/.conkyrc'" >> /home/username/.bashrc
+            - echo "#alias tsup='sudo tailscale up'" >> /home/username/.bashrc
+            - echo "#alias tsup='sudo ~/Downloads/Apps/tailscale/tailscaled --state=tailscaled.state'" >> /home/username/.bashrc
+            - echo "#alias tsdown='sudo tailscale down'" >> /home/username/.bashrc
+            - echo "alias ecry='ecryptfs-mount-private'" >> /home/username/.bashrc
+            - echo "alias proton1='sudo gnome-text-editor /etc/sysctl.conf'" >> /home/username/.bashrc
+            - echo "alias proton2='sudo sysctl -p'" >> /home/username/.bashrc
+            - echo "alias lsnames='ls -Q1 | awk '\''{print substr(\$0, 2, length(\$0)-2)}'\'''" >> /home/username/.bashrc
+            - echo "alias GAMEBU=\"7z a '/mnt/data/username/Documents/Games/Saves/GAMEFOLDER/'\$(date +'%Y-%m-%d-%s')-GAMENAME.7z '/PATH/TO/FILE.SAV'\"" >> /home/username/.bashrc
+
+            #- sudo adduser username kvm
+            - touch /home/username/Templates/'NewDocument'
+            
+    late-commands:
+        #- dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'emulationstation.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Terminal.desktop']"
+        #- dconf write /org/gnome/desktop/search-providers/disabled "['org.gnome.Nautilus.desktop']"
