@@ -8,9 +8,9 @@ autoinstall:
         password: 'password' 
         #generate password hash with '$openssl passwd' OR '$mkpasswd'
         
-    snaps:
-        - name: chromium
-        - name: gallery-dl
+    #snaps:
+        #- name: chromium
+        #- name: gallery-dl
         
     packages:
         - synaptic
