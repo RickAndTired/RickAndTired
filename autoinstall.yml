@@ -92,6 +92,6 @@ autoinstall:
             #- sudo adduser username kvm
             - touch /home/username/Templates/'NewDocument'
             
-    late-commands:
+    #late-commands:
         #- dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'emulationstation.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Terminal.desktop']"
         #- dconf write /org/gnome/desktop/search-providers/disabled "['org.gnome.Nautilus.desktop']"
