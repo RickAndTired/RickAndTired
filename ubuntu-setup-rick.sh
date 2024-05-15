@@ -26,9 +26,9 @@ sudo apt install -y synaptic micro nnn fd-find celluloid gnome-tweaks dconf-edit
 # vkbasalt mangohud com.obsproject.Studio.Plugin.Gstreamer?
 
 
-#gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
 
-##gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
 # nothing or blank
 
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type nothing
@@ -40,15 +40,18 @@ gsettings set org.gnome.settings-daemon.plugins.power power-button-action nothin
 
 gsettings set org.gnome.mutter attach-modal-dialogs false
 
-gsettings set org.gnome.shell.extensions.dash-to-dock click-action minimize
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action focus-minimize-or-appspread
+#minimize or focus-minimize-or-appspread
 
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
+
+gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 40
+
+gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
 
 #gsettings set org.gnome.shell.extensions.ding start-corner top-left
 
 gsettings set org.gnome.shell.extensions.ding show-home false
-
-gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
 
 gsettings set org.gnome.nautilus.preferences show-create-link true
 
@@ -57,17 +60,15 @@ gsettings set org.gnome.nautilus.preferences thumbnail-limit 1000
 
 ##gsettings set org.gnome.nautilus.preferences executable-text-activation ask
 
-##gsettings set org.gnome.Terminal.Legacy.Keybindings copy "<Primary>c"
+##gsettings set org.gnome.Terminal.Legacy.Keybindings copy "<Control>c"
 
-##gsettings set org.gnome.Terminal.Legacy.Keybindings paste "<Primary>v"
+##gsettings set org.gnome.Terminal.Legacy.Keybindings paste "<Control>v"
 
 ##gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend false
 
-##gsettings set org.gnome.desktop.interface clock-format 12h
-
 gsettings set org.gnome.desktop.session idle-delay 0
 
-#gsettings set org.gnome.desktop.screensaver lock-delay 30
+gsettings set org.gnome.desktop.screensaver lock-delay 5
 
 gsettings set org.gnome.desktop.privacy remember-recent-files false
 
@@ -81,9 +82,13 @@ gsettings set org.gnome.desktop.interface clock-show-weekdate true
 
 gsettings set org.gnome.desktop.interface clock-show-seconds true
 
-##gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+gsettings set org.gnome.desktop.interface clock-format 12h
 
-##gsettings set org.gnome.desktop.interface gtk-theme Yaru-dark
+gsettings set org.gnome.desktop.interface overlay-scrolling false
+
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+
+gsettings set org.gnome.desktop.interface gtk-theme Yaru-dark
 
 ##gsettings set org.gnome.desktop.interface icon-theme Yaru-dark
 
@@ -91,13 +96,15 @@ gsettings set org.gnome.desktop.interface enable-hot-corners true
 
 gsettings set com.ubuntu.update-notifier regular-auto-launch-interval 0
 
-
 #gnome-extensions disable ubuntu-appindicators@ubuntu.com
 
 #gnome-extensions disable desktop-icons@csoriano
 
 #gnome-extensions disable ubuntu-dock@ubuntu.com
 
+#dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'emulationstation.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Terminal.desktop']"
+
+#dconf write /org/gnome/desktop/search-providers/disabled "['org.gnome.Nautilus.desktop']"
 
 
 # NoiseTorch
@@ -129,10 +136,10 @@ gsettings set com.ubuntu.update-notifier regular-auto-launch-interval 0
 # Bash Aliases
 echo >> ~/.bashrc
 echo "# Alias" >> ~/.bashrc
-#echo "alias gmode='gamemoded -r'" >> ~/.bashrc
+echo "#alias gmode='gamemoded -r'" >> ~/.bashrc
 echo "alias yt='yt-dlp'" >> ~/.bashrc
 echo "alias yt720='yt-dlp -f \"bestvideo[height<=800]+bestaudio/best[height<=800]\"'" >> ~/.bashrc
-#echo "alias ytup='sudo pip install --upgrade yt-dlp'" >> ~/.bashrc
+echo "#alias ytup='sudo pip install --upgrade yt-dlp'" >> ~/.bashrc
 echo "alias ytmp3='yt-dlp -x --audio-format mp3'" >> ~/.bashrc
 echo "alias ytogg='yt-dlp -x --audio-format vorbis'" >> ~/.bashrc
 echo "alias gdl='/snap/bin/gallery-dl'" >> ~/.bashrc
@@ -141,18 +148,21 @@ echo "alias asusp1='xrandr --output HDMI-A-0 --pos 1440x1300 --output DisplayPor
 echo "alias asusl1='xrandr --output HDMI-A-0 --pos 2560x290 --output DisplayPort-0 --rotate normal'" >> ~/.bashrc
 echo "alias p1='xrandr --output HDMI-A-0 --pos 1080x750 --output DisplayPort-0 --rotate right'" >> ~/.bashrc
 echo "alias l1='xrandr --output HDMI-A-0 --pos 1920x0 --output DisplayPort-0 --rotate normal'" >> ~/.bashrc
-echo "alias asus60fps='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 59.95' && echo >> ~/.conkyrc" >> ~/.bashrc
-echo "alias asus75fps='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 74.97' && echo >> ~/.conkyrc" >> ~/.bashrc
-echo "alias 60fps='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 60.00' && echo >> ~/.conkyrc" >> ~/.bashrc
-echo "alias 120fps='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120.00' && echo >> ~/.conkyrc" >> ~/.bashrc
-echo "alias 144fps='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 143.99' && echo >> ~/.conkyrc" >> ~/.bashrc
+echo "alias asus60hz='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 59.95' && echo >> ~/.conkyrc" >> ~/.bashrc
+echo "alias asus75hz='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 74.97' && echo >> ~/.conkyrc" >> ~/.bashrc
+echo "alias 60hz='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 60.00 && echo >> ~/.conkyrc'" >> ~/.bashrc
+echo "alias 120hz='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120.00 && echo >> ~/.conkyrc'" >> ~/.bashrc
+echo "alias 144hz='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 143.99 && echo >> ~/.conkyrc'" >> ~/.bashrc
 echo "#alias tsup='sudo tailscale up'" >> ~/.bashrc
 echo "#alias tsup='sudo ~/Downloads/Apps/tailscale/tailscaled --state=tailscaled.state'" >> ~/.bashrc
 echo "#alias tsdown='sudo tailscale down'" >> ~/.bashrc
-echo alias ecry='ecryptfs-mount-private' >> ~/.bashrc
-echo alias proton1='sudo gnome-text-editor /etc/sysctl.conf' >> ~/.bashrc
-echo alias proton2='sudo sysctl -p' >> ~/.bashrc
-# alias GAMEBU="7z a '/home/rick/Documents/Link to Documents/Games/Saves/GAME FOLDER/'$(date +"%Y-%m-%d-%s")-GAMENAME.7z '/PATH/TO/FILE.SAV'"
+echo "alias ecry='ecryptfs-mount-private'" >> ~/.bashrc
+echo "alias proton1='sudo gnome-text-editor /etc/sysctl.conf'" >> ~/.bashrc
+echo "alias proton2='sudo sysctl -p'" >> ~/.bashrc
+echo "alias lsnames='ls -Q1 | awk '\''{print substr(\$0, 2, length(\$0)-2)}'\'''" >> ~/.bashrc
+# alias lsnames='ls -Q1 | awk '\''{print substr($0, 2, length($0)-2)}'\'''
+echo "alias GAMEBU=\"7z a '/mnt/data/rick/Documents/Games/Saves/GAMEFOLDER/'\$(date +'%Y-%m-%d-%s')-GAMENAME.7z '/PATH/TO/FILE.SAV'\"" >> ~/.bashrc
+# alias GAMEBU="7z a '/mnt/data/rick/Documents/Games/Saves/GAME FOLDER/'$(date +"%Y-%m-%d-%s")-GAMENAME.7z '/PATH/TO/FILE.SAV'"
 
 
 #sudo adduser $USER kvm
@@ -164,7 +174,11 @@ echo Setup complete
 # Configurations via GUIs
 
 # Ubuntu dock
-# Firefox Files Gedit Calculator Strawberry Discord Steam Qvevri System-Monitor Terminal
+# Firefox Files Gedit Calculator Strawberry Discord Steam Heroic ES-DE System-Monitor Terminal
+# doesn't seem to work- gsettings set org.gnome.shell.favorite-apps ['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'emulationstation.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Terminal.desktop']
+#dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'emulationstation.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Terminal.desktop']"
+
+
 
 # Gnome Settings
 # Date & Time - AM/PM
@@ -300,3 +314,8 @@ echo Setup complete
 # Setup a command to not need password
 # $ sudo visudo -f /etc/sudoers.d/customizations
 # %sudo ALL=NOPASSWD: /path/to/command/command.sh
+
+# GSConnect input fix
+# Add to ~/.profile
+#export GNOME_SETUP_DISPLAY=0
+
