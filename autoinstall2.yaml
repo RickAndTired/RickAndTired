@@ -1,7 +1,7 @@
 autoinstall:
 
-    version: 0.1
-
+    version: 1
+    
     identity:
         hostname: hostname
         username: username
