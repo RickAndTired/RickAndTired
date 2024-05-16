@@ -6,7 +6,6 @@ sudo apt install -y synaptic micro fd-find celluloid gnome-tweaks dconf-editor f
 
 #yt-dlp vlc pdfarranger mumble gimp inkscape corectrl wike vorta easyeffects ocrmypdf wine minetest minetest-server 
 #virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system
-#libvdeplug2t64
 
 #suggestions
 #libdvd-pkg gnome-shell-extension-prefs xfsdump attr quota duperemove libudev0 gsmartcontrol smart-notifier vlc-plugin-pipewire vlc-plugin-svg qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins python3-genshi mumble-server gimp-data-extras gstreamer1.0-plugins-bad python3-pyfuse3
