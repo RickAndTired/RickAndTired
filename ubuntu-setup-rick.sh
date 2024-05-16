@@ -2,15 +2,16 @@
 
 sudo apt update
 
-sudo apt install -y synaptic micro nnn fd-find celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfatprogs xfsprogs btrfs-progs f2fs-tools unrar p7zip-rar htop net-tools wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry qt5-style-plugins smartmontools vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect 
+sudo apt install -y synaptic micro fd-find celluloid gnome-tweaks dconf-editor flatpak pavucontrol exfatprogs xfsprogs btrfs-progs f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry qt5-style-plugins smartmontools vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect 
 
-#yt-dlp vlc pdfarranger mumble gimp inkscape corectrl wike vorta easyeffects gamescope calibre ocrmypdf minetest minetest-server 
+#yt-dlp vlc pdfarranger mumble gimp inkscape corectrl wike vorta easyeffects ocrmypdf wine minetest minetest-server 
 #virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system
+#libvdeplug2t64
 
-# steam-installer suggested
-# libudev0 gtk2-engines-pixbuf:i386 libgtk2.0-0:i386 libudev0:i386 pipewire:i386
+#suggestions
+#libdvdcss2 gnome-shell-extension-prefs xfsdump attr quota duperemove locales:i386 libnss-nis:i386 libnss-nisplus:i386 rng-tools:i386 low-memory-monitor:i386 gnutls-bin:i386 krb5-user:i386 gvfs:i386 jackd2 jackd2:i386 cryptsetup-bin:i386 opus-tools:i386 pulseaudio:i386 librsvg2-bin:i386 lm-sensors:i386 speex:i386 opencl-icd:i386 libudev0 gtk2-engines-pixbuf:i386 libgtk2.0-0:i386 libudev0:i386 pipewire:i386 libvdpau-va-gl1:i386 libgl1-amber-dri:i386 gsmartcontrol smart-notifier vlc-plugin-pipewire vlc-plugin-svg qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins python3-genshi mumble-server gimp-data-extras gstreamer1.0-plugins-bad python3-pyfuse3
 
-#audacity cpupower-gui peek gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio 
+# cpupower-gui calibre nnn samba peek audacity gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio
 
 #virt-manager gnome-boxes spice-webdavd spice-vdagent 
 # virt-manager suggested:
@@ -23,6 +24,7 @@ sudo apt install -y synaptic micro nnn fd-find celluloid gnome-tweaks dconf-edit
 
 # sudo pip install --upgrade yt-dlp
 
+#gnome-software-plugin-flatpak
 #sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 
