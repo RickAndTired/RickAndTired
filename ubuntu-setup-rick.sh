@@ -9,7 +9,7 @@ sudo apt install -y synaptic micro fd-find celluloid gnome-tweaks dconf-editor f
 #libvdeplug2t64
 
 #suggestions
-#libdvd-pkg gnome-shell-extension-prefs xfsdump attr quota duperemove libnss-nis:i386 libnss-nisplus:i386 gnutls-bin:i386 krb5-user:i386 gvfs:i386 jackd2 jackd2:i386 cryptsetup-bin:i386 pulseaudio:i386 librsvg2-bin:i386 lm-sensors:i386 speex:i386 libudev0 gtk2-engines-pixbuf:i386 pipewire:i386 gsmartcontrol smart-notifier vlc-plugin-pipewire vlc-plugin-svg qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins python3-genshi mumble-server gimp-data-extras gstreamer1.0-plugins-bad python3-pyfuse3
+#libdvd-pkg gnome-shell-extension-prefs xfsdump attr quota duperemove libudev0 gsmartcontrol smart-notifier vlc-plugin-pipewire vlc-plugin-svg qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins python3-genshi mumble-server gimp-data-extras gstreamer1.0-plugins-bad python3-pyfuse3
 
 # cpupower-gui calibre nnn samba peek audacity gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio
 
