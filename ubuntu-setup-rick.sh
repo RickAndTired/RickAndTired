@@ -2,16 +2,14 @@
 
 sudo apt update
 
-sudo apt install -y synaptic micro fd-find celluloid gnome-tweaks dconf-editor flatpak pavucontrol exfatprogs xfsprogs btrfs-progs f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry qt5-style-plugins smartmontools vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect 
+sudo apt install -y synaptic micro fd-find celluloid gnome-tweaks gnome-shell-extension-prefs dconf-editor flatpak pavucontrol exfatprogs xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors steam-installer libudev0 mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry gstreamer1.0-plugins-bad qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins smartmontools gsmartcontrol smart-notifier vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect vorta python3-pyfuse3 easyeffects pdfarranger python3-genshi
 
-#yt-dlp vlc pdfarranger mumble gimp inkscape corectrl wike vorta easyeffects ocrmypdf wine minetest minetest-server 
+#yt-dlp vlc vlc-plugin-pipewire vlc-plugin-svg mumble mumble-server gimp gimp-data-extras inkscape corectrl ocrmypdf img2pdf pdfminer-data minetest minetest-server libdvd-pkg
 #virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system
-
-#suggestions
-#libdvd-pkg gnome-shell-extension-prefs xfsdump attr quota duperemove libudev0 gsmartcontrol smart-notifier vlc-plugin-pipewire vlc-plugin-svg qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins python3-genshi mumble-server gimp-data-extras gstreamer1.0-plugins-bad python3-pyfuse3
+    
 #sudo dpkg-reconfigure libdvd-pkg
 
-# cpupower-gui calibre nnn samba peek audacity gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio
+# wine cpupower-gui calibre wike nnn samba peek audacity gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio
 
 #virt-manager gnome-boxes spice-webdavd spice-vdagent 
 # virt-manager suggested:
@@ -19,16 +17,15 @@ sudo apt install -y synaptic micro fd-find celluloid gnome-tweaks dconf-editor f
 
 
 # AppImage - slippi stacer etcher sunshine upscayl remoteplaywhatever ALVR avidemux inkscape losslesscut pix
-# Snap - chromium signal-desktop gallery-dl obs-studio discord steam spotify kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
+#Snap install chromium signal-desktop gallery-dl 
+#obs-studio discord steam spotify kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
 # none - GW2Switcheroo MyStation MasterPDFEditor ventoy lutris rnnoise/noisetorch itch.io sidequest tailscale ryujinx Unigine_Superposition 
 
 # sudo pip install --upgrade yt-dlp
 
-#gnome-software-plugin-flatpak
-#sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-
-# sudo flatpak install -y org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.discordapp.Discord com.heroicgameslauncher.hgl com.obsproject.Studio com.moonlight_stream.Moonlight runtime/org.freedesktop.Platform.GStreamer.gstreamer-vaapi/x86_64/22.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08
+#sudo apt install gnome-software-plugin-flatpak
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak install -y org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.discordapp.Discord com.heroicgameslauncher.hgl com.obsproject.Studio com.moonlight_stream.Moonlight runtime/org.freedesktop.Platform.GStreamer.gstreamer-vaapi/x86_64/22.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08
 
 #org.chromium.Chromium org.mozilla.firefox org.signal.Signal
 #org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.ryujinx.Ryujinx net.minetest.Minetest
@@ -89,7 +86,7 @@ gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 
 gsettings set org.gnome.desktop.interface clock-show-weekday true
 
-gsettings set org.gnome.desktop.interface clock-show-weekdate true
+#gsettings set org.gnome.desktop.interface clock-show-weekdate true
 
 gsettings set org.gnome.desktop.interface clock-show-seconds true
 
@@ -115,7 +112,7 @@ gsettings set com.ubuntu.update-notifier regular-auto-launch-interval 0
 
 #dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'emulationstation.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Terminal.desktop']"
 
-#dconf write /org/gnome/desktop/search-providers/disabled "['org.gnome.Nautilus.desktop']"
+dconf write /org/gnome/desktop/search-providers/disabled "['org.gnome.Nautilus.desktop']"
 
 
 # NoiseTorch
