@@ -2,28 +2,37 @@
 
 sudo apt update
 
-sudo apt install -y synaptic micro nnn fd-find celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfatprogs xfsprogs btrfs-progs f2fs-tools unrar p7zip-rar htop net-tools wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry qt5-style-plugins smartmontools vkbasalt goverlay
+sudo apt install -y synaptic micro nnn fd-find celluloid gnome-tweaks dconf-editor flatpak gnome-software-plugin-flatpak pavucontrol exfatprogs xfsprogs btrfs-progs f2fs-tools unrar p7zip-rar htop net-tools wine conky lm-sensors steam-installer mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry qt5-style-plugins smartmontools vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect 
 
-# gnome-sushi gufw mangohud corectrl yt-dlp graphicsmagick gimp mumble audacity inkscape vlc calibre pdfarranger minetest minetest-server wike vorta easyeffects gamescope libfuse2 virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system
-# ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect virt-manager gnome-boxes spice-webdavd spice-vdagent peek cpupower-gui gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio ocrmypdf
-# virt-manager suggested:
-# gstreamer1.0-plugins-bad libvirt-clients-qemu libvirt-login-shell libvirt-daemon-driver-storage-gluster libvirt-daemon-driver-storage-iscsi-direct libvirt-daemon-driver-storage-rbd libvirt-daemon-driver-storage-zfs libvirt-daemon-driver-lxc libvirt-daemon-driver-vbox libvirt-daemon-driver-xen numad auditd nfs-common open-iscsi pm-utils systemtap zfsutils trousers python3-guestfs ssh-askpass python3-argcomplete
+#yt-dlp vlc pdfarranger mumble gimp inkscape corectrl wike vorta easyeffects gamescope calibre ocrmypdf minetest minetest-server 
+#virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system
+
 # steam-installer suggested
 # libudev0 gtk2-engines-pixbuf:i386 libgtk2.0-0:i386 libudev0:i386 pipewire:i386
 
-# AppImage - retroarch slippi yuzu stacer etcher sunshine upscayl ESDE remoteplaywhatever ALVR avidemux inkscape losslesscut pix
-# Snap - chromium obs-studio discord steam spotify gallery-dl kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
-# none - GW2Switcheroo MasterPDFEditor ventoy lutris rnnoise/noisetorch itch.io sidequest tailscale ryujinx Unigine_Superposition 
+#audacity cpupower-gui peek gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio 
+
+#virt-manager gnome-boxes spice-webdavd spice-vdagent 
+# virt-manager suggested:
+# gstreamer1.0-plugins-bad libvirt-clients-qemu libvirt-login-shell libvirt-daemon-driver-storage-gluster libvirt-daemon-driver-storage-iscsi-direct libvirt-daemon-driver-storage-rbd libvirt-daemon-driver-storage-zfs libvirt-daemon-driver-lxc libvirt-daemon-driver-vbox libvirt-daemon-driver-xen numad auditd nfs-common open-iscsi pm-utils systemtap zfsutils trousers python3-guestfs ssh-askpass python3-argcomplete
+
+
+# AppImage - slippi stacer etcher sunshine upscayl remoteplaywhatever ALVR avidemux inkscape losslesscut pix
+# Snap - chromium signal-desktop gallery-dl obs-studio discord steam spotify kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
+# none - GW2Switcheroo MyStation MasterPDFEditor ventoy lutris rnnoise/noisetorch itch.io sidequest tailscale ryujinx Unigine_Superposition 
 
 # sudo pip install --upgrade yt-dlp
 
 #sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# sudo flatpak install -y com.github.tchx84.Flatseal com.discordapp.Discord com.obsproject.Studio runtime/org.freedesktop.Platform.GStreamer.gstreamer-vaapi/x86_64/22.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08
 
-# sudo flatpak install -y flathub org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.usebottles.bottles org.strawberrymusicplayer.strawberry com.discordapp.Discord org.rncbc.qpwgraph com.github.wwmm.easyeffects com.heroicgameslauncher.hgl dev.lizardbyte.app.Sunshine org.upscayl.Upscayl com.spotify.Client com.github.johnfactotum.Foliate com.obsproject.Studio org.kde.kdenlive org.signal.Signal org.chromium.Chromium org.mozilla.firefox org.videolan.VLC info.mumble.Mumble org.gnome.Boxes com.github.jeromerobert.pdfarranger org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.okular no.mifi.losslesscut com.makemkv.MakeMKV io.github.Soundux org.gnome.World.PikaBackup com.github.taiko2k.tauonmb io.github.philipk.boilr com.steamgriddb.steam-rom-manager org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.yuzu_emu.yuzu org.ryujinx.Ryujinx net.minetest.Minetest com.moonlight_stream.Moonlight
-#org.pipewire.Helvum com.github.hugolabe.Wike io.github.nate_xyz.Conjure com.github.neithern.g4music
-# vkbasalt mangohud com.obsproject.Studio.Plugin.Gstreamer?
+# sudo flatpak install -y org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.discordapp.Discord com.heroicgameslauncher.hgl com.obsproject.Studio com.moonlight_stream.Moonlight runtime/org.freedesktop.Platform.GStreamer.gstreamer-vaapi/x86_64/22.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08
+
+#org.chromium.Chromium org.mozilla.firefox org.signal.Signal
+#org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.ryujinx.Ryujinx net.minetest.Minetest
+#org.upscayl.Upscayl com.spotify.Client org.strawberrymusicplayer.strawberry com.github.taiko2k.tauonmb org.rncbc.qpwgraph com.github.wwmm.easyeffects io.github.Soundux
+#org.videolan.VLC info.mumble.Mumble org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.kdenlive no.mifi.losslesscut com.makemkv.MakeMKV com.github.jeromerobert.pdfarranger io.github.nate_xyz.Conjure com.github.johnfactotum.Foliate org.gnome.Boxes org.gnome.World.PikaBackup io.github.philipk.boilr com.steamgriddb.steam-rom-manager dev.lizardbyte.app.Sunshine com.usebottles.bottles
+
 
 
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
