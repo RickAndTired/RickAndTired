@@ -2,14 +2,11 @@
 
 sudo apt update
 
-sudo apt install -y synaptic micro fd-find celluloid gnome-tweaks gnome-shell-extension-prefs dconf-editor flatpak pavucontrol exfatprogs xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors steam-installer libudev0 mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry gstreamer1.0-plugins-bad qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins smartmontools gsmartcontrol smart-notifier vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect vorta python3-pyfuse3 easyeffects pdfarranger python3-genshi
-
-#yt-dlp vlc vlc-plugin-pipewire vlc-plugin-svg mumble mumble-server gimp gimp-data-extras inkscape corectrl ocrmypdf img2pdf pdfminer-data minetest minetest-server libdvd-pkg
-#virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system
+sudo apt install -y synaptic fd-find celluloid gnome-tweaks gnome-shell-extension-prefs dconf-editor flatpak pavucontrol exfatprogs xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors steam-installer libudev0 mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry gstreamer1.0-plugins-bad qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins smartmontools gsmartcontrol smart-notifier vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect vorta python3-pyfuse3 easyeffects pdfarranger python3-genshi yt-dlp vlc vlc-plugin-pipewire vlc-plugin-svg mumble mumble-server gimp gimp-data-extras inkscape corectrl ocrmypdf img2pdf pdfminer-data minetest minetest-server libdvd-pkg virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system
     
 #sudo dpkg-reconfigure libdvd-pkg
 
-# wine cpupower-gui calibre wike nnn samba peek audacity gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio
+# wine cpupower-gui calibre wike nnn micro samba peek audacity gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio
 
 #virt-manager gnome-boxes spice-webdavd spice-vdagent 
 # virt-manager suggested:
@@ -110,9 +107,29 @@ gsettings set com.ubuntu.update-notifier regular-auto-launch-interval 0
 
 #gnome-extensions disable ubuntu-dock@ubuntu.com
 
-#dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'emulationstation.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Terminal.desktop']"
+#dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'emulationstation.desktop', 'org.gnome.SystemMonitor.desktop', 'org.gnome.Terminal.desktop']"
 
 dconf write /org/gnome/desktop/search-providers/disabled "['org.gnome.Nautilus.desktop']"
+#dconf write /org/gnome/terminal/legacy/keybindings/paste "'<Primary>v'"
+#dconf write /org/gnome/terminal/legacy/keybindings/copy "'<Primary>c'"
+# might need to find a way to disable ctrl+c clear
+dconf write /org/gnome/TextEditor/indent-style "'space'"
+dconf write /org/gnome/TextEditor/tab-width "uint32 4"
+dconf write /org/gnome/TextEditor/show-line-numbers "true"
+dconf write /org/gnome/TextEditor/highlight-current-line "true"
+dconf write /org/gnome/TextEditor/restore-session "false"
+dconf write /org/gnome/desktop/calendar/show-weekdate "true"
+dconf write /org/gnome/gnome-system-monitor/show-whose-processes "'all'"
+dconf write /org/gnome/gnome-system-monitor/disktreenew/col-4-visible "true"
+dconf write /org/gnome/gnome-system-monitor/proctree/col-26-visible "false"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding "'<Shift><Control>Escape'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'gnome-system-monitor'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'System Monitor'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
+dconf write  ""
+dconf write  ""
+dconf write  ""
+
 
 
 # NoiseTorch
@@ -156,8 +173,8 @@ echo "alias asusp1='xrandr --output HDMI-A-0 --pos 1440x1300 --output DisplayPor
 echo "alias asusl1='xrandr --output HDMI-A-0 --pos 2560x290 --output DisplayPort-0 --rotate normal'" >> ~/.bashrc
 echo "alias p1='xrandr --output HDMI-A-0 --pos 1080x750 --output DisplayPort-0 --rotate right'" >> ~/.bashrc
 echo "alias l1='xrandr --output HDMI-A-0 --pos 1920x0 --output DisplayPort-0 --rotate normal'" >> ~/.bashrc
-echo "alias asus60hz='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 59.95' && echo >> ~/.conkyrc" >> ~/.bashrc
-echo "alias asus75hz='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 74.97' && echo >> ~/.conkyrc" >> ~/.bashrc
+echo "alias asus60hz='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 59.95 && echo >> ~/.conkyrc'" >> ~/.bashrc
+echo "alias asus75hz='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 74.97 && echo >> ~/.conkyrc'" >> ~/.bashrc
 echo "alias 60hz='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 60.00 && echo >> ~/.conkyrc'" >> ~/.bashrc
 echo "alias 120hz='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120.00 && echo >> ~/.conkyrc'" >> ~/.bashrc
 echo "alias 144hz='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 143.99 && echo >> ~/.conkyrc'" >> ~/.bashrc
