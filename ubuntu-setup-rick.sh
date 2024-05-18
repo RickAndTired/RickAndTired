@@ -2,9 +2,7 @@
 
 sudo apt update
 
-sudo apt install -y synaptic fd-find celluloid dconf-editor flatpak pavucontrol exfatprogs xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors steam-installer libudev0 mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry gstreamer1.0-plugins-bad qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins smartmontools gsmartcontrol smart-notifier vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect vorta python3-pyfuse3 easyeffects pdfarranger python3-genshi yt-dlp vlc vlc-plugin-pipewire vlc-plugin-svg mumble mumble-server gimp gimp-data-extras inkscape corectrl ocrmypdf img2pdf pdfminer-data minetest minetest-server libdvd-pkg virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system python3-tk tix
-    
-#sudo dpkg-reconfigure libdvd-pkg
+sudo apt install -y synaptic fd-find celluloid dconf-editor flatpak pavucontrol exfatprogs xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors steam-installer libudev0 mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry gstreamer1.0-plugins-bad qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins smartmontools gsmartcontrol smart-notifier vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect vorta python3-pyfuse3 easyeffects pdfarranger python3-genshi yt-dlp vlc vlc-plugin-pipewire vlc-plugin-svg mumble mumble-server gimp gimp-data-extras inkscape corectrl ocrmypdf img2pdf pdfminer-data minetest minetest-server libdvd-pkg virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system python3-tk tix qt6ct
 
 # wine cpupower-gui calibre wike nnn micro samba peek audacity gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio gnome-tweaks gnome-shell-extension-prefs
 
@@ -12,9 +10,10 @@ sudo apt install -y synaptic fd-find celluloid dconf-editor flatpak pavucontrol 
 # virt-manager suggested:
 # gstreamer1.0-plugins-bad libvirt-clients-qemu libvirt-login-shell libvirt-daemon-driver-storage-gluster libvirt-daemon-driver-storage-iscsi-direct libvirt-daemon-driver-storage-rbd libvirt-daemon-driver-storage-zfs libvirt-daemon-driver-lxc libvirt-daemon-driver-vbox libvirt-daemon-driver-xen numad auditd nfs-common open-iscsi pm-utils systemtap zfsutils trousers python3-guestfs ssh-askpass python3-argcomplete
 
+sudo dpkg-reconfigure libdvd-pkg
 
+sudo snap install chromium signal-desktop gallery-dl 
 # AppImage - slippi stacer etcher sunshine upscayl remoteplaywhatever ALVR avidemux inkscape losslesscut pix
-#Snap install chromium signal-desktop gallery-dl 
 #obs-studio discord steam spotify kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
 # none - GW2Switcheroo MyStation MasterPDFEditor ventoy lutris rnnoise/noisetorch itch.io sidequest tailscale ryujinx Unigine_Superposition 
 
@@ -124,8 +123,18 @@ dconf write /org/gnome/gnome-system-monitor/show-whose-processes "'all'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding "'<Shift><Control>Escape'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'gnome-system-monitor'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'System Monitor'"
-dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding "'<Super>x'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command "'gnome-control-center display'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name "'Displays'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding "'<Super>c'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command "'/home/rick/.local/share/applications/conky-reset.sh'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/name "'Conky Reset'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/binding "'<Super>End'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/command "'systemctl suspend'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/name "'Suspend'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']"
 
+dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'MyStation.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Terminal.desktop']"
 
 
 # NoiseTorch
@@ -197,13 +206,11 @@ echo Setup complete
 # Ubuntu dock
 # Firefox Files Gedit Calculator Strawberry Discord Steam Heroic ES-DE System-Monitor Terminal
 # doesn't seem to work- gsettings set org.gnome.shell.favorite-apps ['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'emulationstation.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Terminal.desktop']
-#dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'emulationstation.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Terminal.desktop']"
 
-
+#/etc/environment
+#QT_QPA_PLATFORMTHEME=qt5ct
 
 # Gnome Settings
-# Date & Time - AM/PM
-# Search - remove Files
 # Keyboard shortcut
 # gnome-system-monitor =ctrl+shift+esc
 # gnome-control-center display =super+x
@@ -213,42 +220,23 @@ echo Setup complete
 # Default Video player - Celluloid
 # Default Music player - Celluloid
 
-# Gnome Tweaks
-# Kill x server - ctrl+alt+backspace
-
 # Gnome Terminal
 # Use colors from system theme - Disable
 # Built-in schemes - Tango dark
-# Shortcuts
-# Ctrl+C and Ctrl+V for Copy and Paste
-
-# Max Map Count
-# check current $ cat /proc/sys/vm/max_map_count
-# sudo echo "vm.max_map_count=16777216" >> /etc/sysctl.d/80-gamecompatibility.conf
-# permission denied - need to manually do this
 
 # Files bookmarks
-# data share steamapps Games Temp
+# Data Media Games Saves applications Temp
 
-# Conky - autostart
-
-# Gedit
-# Tab width 4 spaces
+# Startup Applications
+# Conky
+# input-remapper -disable
 
 # Inkscape
 # Symbolic Icons
 
 # Alsamixer
 # Automute - off
-# auto start - amixer set -c1 Headphone unmute 100%
-
-# Pulse Audio Latency
-# Check current latency
-# pacmd list-sinks | grep latency:
-# Set latency to 50ms
-# /etc/pulse/daemon.conf
-# default-fragments = 2
-# default-fragment-size-msec =25
+# still needed? auto start - amixer set -c1 Headphone unmute 100%
 
 # OBS Settings
 # mkv - x264 - VBR - 30000 - CRF 22 - Keyframe 0 - CPU superfast
@@ -297,24 +285,8 @@ echo Setup complete
 # Qvevri
 # Enable left/right panel
 
-
-# Gnome Shell Applications
-# Accessories - Archive Manager, Calculator, Cheese, Document Scanner, Document Viewer, Files, Screenshot, Startup Disk Creator, System Monitor, Terminal, Text Editor
-# Games - Solitaire, Mahjongg, Mines, Minetest, Qvevri, Steam, Sudoku
-# Graphics - Glimpse, Image Viewer, Inkscape, Shotwell
-# Internet - Chromium, Discord, Firefox, Mumble, Telegram, Thunderbird, Transmission
-# Office - Calendar, LibreOffice
-# Sound & Video - Celluloid, gPodder, mpv, OBS, Rhythmbox, Spotify, Strawberry, Videos, VLC
-# System - dconf Editor, Disk Usage, Disks, Extensions, Firewall, Pavucontrol, Settings, Software Sources, Software Updater, Startup Applications, Synaptic, Tweaks, Ubuntu Software
-# Useless - 
-
-# Portrait 1
-# xrandr --output HDMI-A-1 --primary --pos 0x1300 --output HDMI-A-0 --rotate left
-# Landscape 1
-# xrandr --output HDMI-A-1 --primary --pos 0x360 --output HDMI-A-0 --rotate normal
-# Landscape 2
-# xrandr --output HDMI-A-1 --pos 0x360 --output HDMI-A-0 --primary --rotate normal
-
+# Gnome Tweaks
+# Kill x server - ctrl+alt+backspace
 
 # Macbook startup chime
 # sudo printf "\x07\x00\x00\x00\x00" > /sys/firmware/efi/efivars/SystemAudioVolume-7c436110-ab2a-4bbb-a880-fe41995c9f82
