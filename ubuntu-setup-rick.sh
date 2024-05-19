@@ -17,10 +17,8 @@ sudo apt install -y synaptic fd-find celluloid dconf-editor flatpak pavucontrol 
 sudo dpkg-reconfigure libdvd-pkg
 
 sudo snap install chromium signal-desktop gallery-dl 
-# AppImage - slippi stacer etcher sunshine upscayl remoteplaywhatever ALVR avidemux inkscape losslesscut pix
-#obs-studio discord steam spotify kdenlive foliate nyrna minetest openspades retroarch tauon telegram-desktop
-# none - GW2Switcheroo MyStation MasterPDFEditor ventoy lutris rnnoise/noisetorch itch.io sidequest tailscale ryujinx Unigine_Superposition 
-
+# AppImage - Sunshine Moonlight Inkscape LocalSend Upscayl avidemux losslesscut pix
+# None - GW2Switcheroo MyStation tailscale ryujinx MasterPDFEditor ventoy itch.io sidequest Unigine_Superposition 
 # sudo pip install --upgrade yt-dlp
 
 #sudo apt install gnome-software-plugin-flatpak
@@ -59,10 +57,6 @@ gsettings set org.gnome.nautilus.preferences thumbnail-limit 1000
 # (1GB)
 
 ##gsettings set org.gnome.nautilus.preferences executable-text-activation ask
-
-##gsettings set org.gnome.Terminal.Legacy.Keybindings copy "<Control>c"
-
-##gsettings set org.gnome.Terminal.Legacy.Keybindings paste "<Control>v"
 
 ##gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend false
 
@@ -133,31 +127,6 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/cus
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']"
 
 
-
-# NoiseTorch
-#wget https://github.com/noisetorch/NoiseTorch/releases/download/v0.12.0/NoiseTorch_x64_v0.12.0.tgz
-#tar -C $HOME -xzf NoiseTorch_x64_v0.12.0.tgz
-#gtk-update-icon-cache
-#sudo setcap 'CAP_SYS_RESOURCE=+ep' ~/.local/bin/noisetorch
-
-
-# Qvevri installer
-#wget https://github.com/RickAndTired/Qvevri/archive/v0.1-beta.tar.gz
-#tar -xzf v0.1-beta.tar.gz
-#sudo mv Qvevri-0.1-beta /opt/Qvevri
-#cp /opt/Qvevri/qvevri.desktop ~/.local/share/applications/qvevri.desktop
-#sudo ln -s /opt/Qvevri/bin/qvevri /bin/qvevri
-#rm v0.1-beta.tar.gz
-
-
-# FireFox Gnome Theme
-#####git clone https://github.com/rafaelmardojai/firefox-gnome-theme
-#####./firefox-gnome-theme/scripts/install.sh
-# Update within your-profile-folder/chrome/firefox-gnome-theme
-# git pull origin master
-
-
-
 # Bash Aliases
 echo >> ~/.bashrc
 echo "# Alias" >> ~/.bashrc
@@ -198,10 +167,7 @@ echo Setup complete
 
 # Configurations via GUIs
 
-# Ubuntu dock
-# Firefox Files Text-Editor Calculator Strawberry Discord Steam Heroic MyStation System-Monitor Terminal
-
-
+# qt5ct and qt6ct set theme to dark
 #/etc/environment
 #QT_QPA_PLATFORMTHEME=qt5ct
 
@@ -269,7 +235,6 @@ echo Setup complete
 
 # Nvidia
 #sudo ubuntu-drivers autoinstall
-
 
 # Qvevri
 # Enable left/right panel
