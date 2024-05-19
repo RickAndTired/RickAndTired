@@ -1,5 +1,9 @@
 #!/bin/bash
 
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type nothing
+gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
+
 sudo apt update
 
 sudo apt install -y synaptic fd-find celluloid dconf-editor flatpak pavucontrol exfatprogs xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors steam-installer libudev0 mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry gstreamer1.0-plugins-bad qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins smartmontools gsmartcontrol smart-notifier vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect vorta python3-pyfuse3 easyeffects pdfarranger python3-genshi yt-dlp vlc vlc-plugin-pipewire vlc-plugin-svg mumble mumble-server gimp gimp-data-extras inkscape corectrl ocrmypdf img2pdf pdfminer-data minetest minetest-server libdvd-pkg virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system python3-tk tix qt6ct
@@ -31,14 +35,6 @@ sudo flatpak install -y org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.git
 
 
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
-
-gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
-# nothing or blank
-
-gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type nothing
-# nothing or blank
-
-gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
 
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action nothing
 
@@ -106,8 +102,10 @@ gsettings set com.ubuntu.update-notifier regular-auto-launch-interval 0
 
 #gnome-extensions disable ubuntu-dock@ubuntu.com
 
-#dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'emulationstation.desktop', 'org.gnome.SystemMonitor.desktop', 'org.gnome.Terminal.desktop']"
+dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'MyStation.desktop', 'org.gnome.SystemMonitor.desktop', 'org.gnome.Terminal.desktop']"
 
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-last "@as []"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/mic-mute "['<Alt>period']"
 dconf write /org/gnome/desktop/search-providers/disabled "['org.gnome.Nautilus.desktop']"
 dconf write /org/gnome/terminal/legacy/keybindings/paste "'<Primary>v'"
 dconf write /org/gnome/terminal/legacy/keybindings/copy "'<Primary>c'"
@@ -134,7 +132,6 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/cus
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/name "'Suspend'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']"
 
-dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'MyStation.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Terminal.desktop']"
 
 
 # NoiseTorch
@@ -144,7 +141,6 @@ dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gno
 #sudo setcap 'CAP_SYS_RESOURCE=+ep' ~/.local/bin/noisetorch
 
 
-
 # Qvevri installer
 #wget https://github.com/RickAndTired/Qvevri/archive/v0.1-beta.tar.gz
 #tar -xzf v0.1-beta.tar.gz
@@ -152,7 +148,6 @@ dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gno
 #cp /opt/Qvevri/qvevri.desktop ~/.local/share/applications/qvevri.desktop
 #sudo ln -s /opt/Qvevri/bin/qvevri /bin/qvevri
 #rm v0.1-beta.tar.gz
-
 
 
 # FireFox Gnome Theme
@@ -204,19 +199,13 @@ echo Setup complete
 # Configurations via GUIs
 
 # Ubuntu dock
-# Firefox Files Gedit Calculator Strawberry Discord Steam Heroic ES-DE System-Monitor Terminal
-# doesn't seem to work- gsettings set org.gnome.shell.favorite-apps ['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'emulationstation.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Terminal.desktop']
+# Firefox Files Text-Editor Calculator Strawberry Discord Steam Heroic MyStation System-Monitor Terminal
+
 
 #/etc/environment
 #QT_QPA_PLATFORMTHEME=qt5ct
 
 # Gnome Settings
-# Keyboard shortcut
-# gnome-system-monitor =ctrl+shift+esc
-# gnome-control-center display =super+x
-# /home/rick/.local/share/applications/conky-reset.sh =super+c
-# xkill =ctrl+shift+~
-# systemctl suspend =super+stop
 # Default Video player - Celluloid
 # Default Music player - Celluloid
 
