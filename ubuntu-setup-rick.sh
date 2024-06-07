@@ -6,7 +6,7 @@ gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
 
 sudo apt update
 
-sudo apt install -y synaptic fd-find celluloid dconf-editor flatpak pavucontrol exfatprogs xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors steam-installer libudev0 mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry gstreamer1.0-plugins-bad qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins smartmontools gsmartcontrol smart-notifier vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect vorta python3-pyfuse3 easyeffects pdfarranger python3-genshi yt-dlp vlc vlc-plugin-pipewire vlc-plugin-svg mumble mumble-server gimp gimp-data-extras inkscape corectrl ocrmypdf img2pdf pdfminer-data minetest minetest-server libdvd-pkg virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system python3-tk tix qt6ct
+sudo apt install -y synaptic fd-find celluloid dconf-editor flatpak pavucontrol exfatprogs xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors steam-installer libudev0 mesa-utils vulkan-tools gnome-games mypaint libegl1:i386 v4l-utils guvcview input-remapper qpwgraph piper strawberry gstreamer1.0-plugins-bad qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins smartmontools gsmartcontrol smart-notifier vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect vorta python3-pyfuse3 easyeffects pdfarranger python3-genshi yt-dlp vlc vlc-plugin-pipewire vlc-plugin-svg mumble mumble-server gimp gimp-data-extras inkscape corectrl ocrmypdf img2pdf pdfminer-data minetest minetest-server libdvd-pkg virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system python3-tk tix qt6ct ecryptfs-utils python-is-python3
 
 # wine cpupower-gui calibre wike nnn micro samba peek audacity gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio gnome-tweaks gnome-shell-extension-prefs
 
@@ -23,12 +23,12 @@ sudo snap install chromium signal-desktop gallery-dl
 
 #sudo apt install gnome-software-plugin-flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install -y org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.discordapp.Discord com.heroicgameslauncher.hgl com.obsproject.Studio com.moonlight_stream.Moonlight runtime/org.freedesktop.Platform.GStreamer.gstreamer-vaapi/x86_64/22.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08
+sudo flatpak install -y org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.discordapp.Discord com.heroicgameslauncher.hgl io.github.peazip.PeaZip fr.romainvigier.MetadataCleaner com.obsproject.Studio com.moonlight_stream.Moonlight runtime/org.freedesktop.Platform.GStreamer.gstreamer-vaapi/x86_64/22.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08 com.interversehq.qView io.gitlab.adhami3310.Footage
 
 #org.chromium.Chromium org.mozilla.firefox org.signal.Signal
 #org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.ryujinx.Ryujinx net.minetest.Minetest
 #org.upscayl.Upscayl com.spotify.Client org.strawberrymusicplayer.strawberry com.github.taiko2k.tauonmb org.rncbc.qpwgraph com.github.wwmm.easyeffects io.github.Soundux
-#org.videolan.VLC info.mumble.Mumble org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.kdenlive no.mifi.losslesscut com.makemkv.MakeMKV com.github.jeromerobert.pdfarranger io.github.nate_xyz.Conjure com.github.johnfactotum.Foliate org.gnome.Boxes org.gnome.World.PikaBackup io.github.philipk.boilr com.steamgriddb.steam-rom-manager dev.lizardbyte.app.Sunshine com.usebottles.bottles
+#org.videolan.VLC io.github.celluloid_player.Celluloid info.mumble.Mumble org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.kdenlive no.mifi.losslesscut com.makemkv.MakeMKV com.github.jeromerobert.pdfarranger io.github.nate_xyz.Conjure com.github.johnfactotum.Foliate org.gnome.Boxes org.gnome.World.PikaBackup io.github.philipk.boilr com.steamgriddb.steam-rom-manager dev.lizardbyte.app.Sunshine com.usebottles.bottles
 
 
 
@@ -136,8 +136,9 @@ echo "alias yt720='yt-dlp -f \"bestvideo[height<=800]+bestaudio/best[height<=800
 echo "#alias ytup='sudo pip install --upgrade yt-dlp'" >> ~/.bashrc
 echo "alias ytmp3='yt-dlp -x --audio-format mp3'" >> ~/.bashrc
 echo "alias ytogg='yt-dlp -x --audio-format vorbis'" >> ~/.bashrc
-echo "alias gdl='/snap/bin/gallery-dl'" >> ~/.bashrc
+echo "alias gdl='/snap/bin/gallery-dl -d .'" >> ~/.bashrc
 echo "alias rsy='rsync -avhP'" >> ~/.bashrc
+echo "alias rsytest='rsync -navhP'" >> ~/.bashrc
 echo "alias asusp1='xrandr --output HDMI-A-0 --pos 1440x1300 --output DisplayPort-0 --rotate left'" >> ~/.bashrc
 echo "alias asusl1='xrandr --output HDMI-A-0 --pos 2560x290 --output DisplayPort-0 --rotate normal'" >> ~/.bashrc
 echo "alias p1='xrandr --output HDMI-A-0 --pos 1080x750 --output DisplayPort-0 --rotate right'" >> ~/.bashrc
@@ -172,8 +173,9 @@ echo Setup complete
 #QT_QPA_PLATFORMTHEME=qt5ct
 
 # Gnome Settings
-# Default Video player - Celluloid
-# Default Music player - Celluloid
+# Default Video player - mpv
+# Default Music player - mpv
+# Default Image Viewer - qView
 
 # Gnome Terminal
 # Use colors from system theme - Disable
@@ -268,3 +270,7 @@ echo Setup complete
 # Add to ~/.profile
 #export GNOME_SETUP_DISPLAY=0
 
+#pactl list | grep "Headphones"
+#pactl set-sink-port 0 analog-output-headphones
+#pactl list | grep "Line Out"
+#pactl set-sink-port 0 analog-output-lineout
