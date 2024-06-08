@@ -3,6 +3,7 @@
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type nothing
 gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
+gsettings set org.gnome.desktop.session idle-delay 0
 
 sudo apt update
 
@@ -59,8 +60,6 @@ gsettings set org.gnome.nautilus.preferences thumbnail-limit 1000
 ##gsettings set org.gnome.nautilus.preferences executable-text-activation ask
 
 ##gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend false
-
-gsettings set org.gnome.desktop.session idle-delay 0
 
 gsettings set org.gnome.desktop.screensaver lock-delay 5
 
