@@ -165,6 +165,12 @@ echo "alias GAMEBU=\"7z a '/mnt/data/rick/Documents/Games/Saves/GAMEFOLDER/'\$(d
 
 touch ~/Templates/'New Document'
 
+mkdir -p ~/.icons/default
+echo "[Icon Theme]
+Name=Default
+Comment=Default Cursor Theme
+Inherits=Yaru" > ~/.icons/default/index.theme
+
 echo Setup complete
 
 # Configurations via GUIs
