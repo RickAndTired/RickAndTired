@@ -24,7 +24,7 @@ sudo snap install chromium signal-desktop
 # None - GW2Switcheroo MyStation tailscale ryujinx MasterPDFEditor ventoy itch.io sidequest Unigine_Superposition 
 # sudo pip install --upgrade yt-dlp
 
-#sudo apt install gnome-software-plugin-flatpak
+sudo apt install gnome-software-plugin-flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install -y org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.discordapp.Discord com.heroicgameslauncher.hgl io.github.peazip.PeaZip fr.romainvigier.MetadataCleaner com.obsproject.Studio com.moonlight_stream.Moonlight runtime/org.freedesktop.Platform.GStreamer.gstreamer-vaapi/x86_64/22.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08 com.interversehq.qView io.gitlab.adhami3310.Footage
 
@@ -165,6 +165,7 @@ echo "alias GAMEBU=\"7z a '/mnt/data/rick/Documents/Games/Saves/GAMEFOLDER/'\$(d
 
 touch ~/Templates/'New Document'
 
+# Fix cursor on QT programs
 mkdir -p ~/.icons/default
 echo "[Icon Theme]
 Name=Default
@@ -231,6 +232,20 @@ echo Setup complete
 # Allow Firefox to install and run studies - Disable
 # Allow Firefox to send backlogged crash reports - Enabled
 
+# Heroic
+# Default Installation path
+# /mnt/data/Games/PC/Heroic
+# Folder for wine prefixes
+# /mnt/data/Games/PC/Heroic/Prefixes
+# ENABLE_VKBASALT
+# 1
+# VKBASALT_CONFIG_FILE
+# /mnt/data/Games/PC/Heroic/vkBasalt.conf
+# MANGOHUD
+# 1
+# MANGOHUD_CONFIGFILE
+# /mnt/data/Games/PC/Heroic/MangoHud.conf
+
 
 # Swap file
 #sudo swapoff -a
@@ -284,3 +299,7 @@ echo Setup complete
 
 # Gnome Tweaks to set font scaling factor if dconf doesn't work
 #gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
+
+# Lower latency, better gaming performance
+# /etc/default/grub
+# GRUB_CMDLINE_LINUX_DEFAULT=preempt=full
