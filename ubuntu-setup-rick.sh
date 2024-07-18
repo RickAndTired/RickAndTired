@@ -10,7 +10,7 @@ sudo apt update
 sudo apt install -y synaptic fd-find mpv celluloid dconf-editor flatpak pavucontrol exfatprogs xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors libudev0 mesa-utils vulkan-tools gnome-games mypaint v4l-utils guvcview input-remapper qpwgraph piper strawberry gstreamer1.0-plugins-bad qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins smartmontools gsmartcontrol smart-notifier vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect vorta python3-pyfuse3 easyeffects pdfarranger python3-genshi yt-dlp vlc vlc-plugin-pipewire vlc-plugin-svg mumble mumble-server gimp gimp-data-extras inkscape corectrl ocrmypdf img2pdf pdfminer-data minetest minetest-server libdvd-pkg virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system python3-tk tix qt6ct ecryptfs-utils python-is-python3 gallery-dl
 
 #virtualbox-guest-utils-hwe virtualbox-guest-utils virtualbox-guest-x11-hwe virtualbox-guest-x11
-# wine cpupower-gui calibre wike nnn micro samba peek audacity gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio gnome-tweaks gnome-shell-extension-prefs
+# wine cpupower-gui calibre wike nnn micro samba peek audacity gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio gnome-tweaks gnome-shell-extension-prefs steam-installer libegl1:i386
 
 #virt-manager gnome-boxes spice-webdavd spice-vdagent 
 # virt-manager suggested:
