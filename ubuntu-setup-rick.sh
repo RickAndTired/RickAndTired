@@ -6,11 +6,11 @@ gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
 gsettings set org.gnome.desktop.session idle-delay 0
 
 sudo apt update
-
-sudo apt install -y synaptic fd-find mpv celluloid dconf-editor flatpak pavucontrol exfatprogs xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors libudev0 mesa-utils vulkan-tools gnome-games mypaint v4l-utils guvcview input-remapper qpwgraph piper strawberry gstreamer1.0-plugins-bad qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins smartmontools gsmartcontrol smart-notifier vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect vorta python3-pyfuse3 easyeffects pdfarranger python3-genshi yt-dlp vlc vlc-plugin-pipewire vlc-plugin-svg mumble mumble-server gimp gimp-data-extras inkscape corectrl ocrmypdf img2pdf pdfminer-data minetest minetest-server libdvd-pkg virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system python3-tk tix qt6ct ecryptfs-utils python-is-python3 gallery-dl
+sudo dpkg --add-architecture i386
+sudo apt install -y synaptic fd-find mpv celluloid dconf-editor flatpak pavucontrol exfatprogs xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors libudev0 mesa-utils vulkan-tools gnome-games steam-installer libegl1:i386 mypaint v4l-utils guvcview input-remapper qpwgraph piper strawberry gstreamer1.0-plugins-bad qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins smartmontools gsmartcontrol smart-notifier vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect vorta python3-pyfuse3 easyeffects pdfarranger python3-genshi yt-dlp vlc vlc-plugin-pipewire vlc-plugin-svg mumble mumble-server gimp gimp-data-extras inkscape corectrl ocrmypdf img2pdf pdfminer-data minetest libdvd-pkg virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system python3-tk tix qt6ct ecryptfs-utils python-is-python3 gallery-dl gnome-epub-thumbnailer
 
 #virtualbox-guest-utils-hwe virtualbox-guest-utils virtualbox-guest-x11-hwe virtualbox-guest-x11
-# wine cpupower-gui calibre wike nnn micro samba peek audacity gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio gnome-tweaks gnome-shell-extension-prefs steam-installer libegl1:i386
+# wine cpupower-gui calibre wike nnn micro samba peek audacity gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio gnome-tweaks gnome-shell-extension-prefs minetest-server
 
 #virt-manager gnome-boxes spice-webdavd spice-vdagent 
 # virt-manager suggested:
@@ -26,7 +26,7 @@ sudo snap install chromium signal-desktop
 
 sudo apt install gnome-software-plugin-flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install -y org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.discordapp.Discord com.heroicgameslauncher.hgl io.github.peazip.PeaZip fr.romainvigier.MetadataCleaner com.obsproject.Studio com.moonlight_stream.Moonlight runtime/org.freedesktop.Platform.GStreamer.gstreamer-vaapi/x86_64/22.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08 com.interversehq.qView io.gitlab.adhami3310.Footage
+sudo flatpak install -y org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.discordapp.Discord com.heroicgameslauncher.hgl io.github.peazip.PeaZip fr.romainvigier.MetadataCleaner com.obsproject.Studio com.moonlight_stream.Moonlight runtime/org.freedesktop.Platform.GStreamer.gstreamer-vaapi/x86_64/22.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08 com.interversehq.qView io.gitlab.adhami3310.Footage org.onlyoffice.desktopeditors io.github.mhogomchungu.media-downloader
 
 #org.chromium.Chromium org.mozilla.firefox org.signal.Signal
 #org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.ryujinx.Ryujinx net.minetest.Minetest
@@ -153,12 +153,12 @@ echo "#alias tsup='sudo tailscale up'" >> ~/.bashrc
 echo "#alias tsup='sudo ~/Downloads/Apps/tailscale/tailscaled --state=tailscaled.state'" >> ~/.bashrc
 echo "#alias tsdown='sudo tailscale down'" >> ~/.bashrc
 echo "alias ecry='ecryptfs-mount-private'" >> ~/.bashrc
-echo "alias proton1='sudo gnome-text-editor /etc/sysctl.conf'" >> ~/.bashrc
-echo "alias proton2='sudo sysctl -p'" >> ~/.bashrc
+echo "alias vpnon='sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1 && sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1'" >> ~/.bashrc
+echo "alias vpnoff='sudo sysctl -w net.ipv6.conf.all.disable_ipv6=0 && sudo sysctl -w net.ipv6.conf.default.disable_ipv6=0 && sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=0'" >> ~/.bashrc
 echo "alias lsnames='ls -Q1 | awk '\''{print substr(\$0, 2, length(\$0)-2)}'\'''" >> ~/.bashrc
 # alias lsnames='ls -Q1 | awk '\''{print substr($0, 2, length($0)-2)}'\'''
-echo "alias GAMEBU=\"7z a '/mnt/data/rick/Documents/Games/Saves/GAMEFOLDER/'\$(date +'%Y-%m-%d-%s')-GAMENAME.7z '/PATH/TO/FILE.SAV'\"" >> ~/.bashrc
-# alias GAMEBU="7z a '/mnt/data/rick/Documents/Games/Saves/GAME FOLDER/'$(date +"%Y-%m-%d-%s")-GAMENAME.7z '/PATH/TO/FILE.SAV'"
+echo "alias GAMEBU=\"7z a '/mnt/data/Rick/Documents/Games/Saves/GAMEFOLDER/'\$(date +'%Y-%m-%d-%s')-GAMENAME.7z '/PATH/TO/FILE.SAV'\"" >> ~/.bashrc
+# alias GAMEBU="7z a '/mnt/data/Rick/Documents/Games/Saves/GAME FOLDER/'$(date +"%Y-%m-%d-%s")-GAMENAME.7z '/PATH/TO/FILE.SAV'"
 
 
 #sudo adduser $USER kvm
@@ -201,6 +201,7 @@ echo Setup complete
 
 # Alsamixer
 # Automute - off
+# sudo alsactl store
 # still needed? auto start - amixer set -c1 Headphone unmute 100%
 
 # OBS Settings
