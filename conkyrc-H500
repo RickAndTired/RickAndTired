@@ -13,7 +13,7 @@ conky.config = {
   use_xft = true,
   font = 'DejaVu Sans Mono:size=10',
   gap_x = -1900,
-  gap_y = 10, 
+  gap_y = 160,
   maximum_width = 220,
   minimum_height = 5,
   minimum_width = 5,
@@ -39,6 +39,12 @@ conky.config = {
 
 conky.text = [[
 Alt positions
+Landscape AOC+Acer top right
+  gap_x = -1900,
+  gap_y = 180, 
+Landscape two 1440ps
+  gap_x = -2525,
+  gap_y = 20, 
 Landscape Acer top right
   gap_x = -1895,
   gap_y = 20,
