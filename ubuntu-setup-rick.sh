@@ -7,10 +7,10 @@ gsettings set org.gnome.desktop.session idle-delay 0
 
 sudo apt update
 sudo dpkg --add-architecture i386
-sudo apt install -y synaptic fd-find mpv celluloid dconf-editor flatpak pavucontrol exfatprogs xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors libudev0 mesa-utils vulkan-tools gnome-games steam-installer libegl1:i386 mypaint v4l-utils guvcview input-remapper qpwgraph piper strawberry gstreamer1.0-plugins-bad qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins smartmontools gsmartcontrol smart-notifier vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect vorta python3-pyfuse3 easyeffects pdfarranger python3-genshi yt-dlp vlc vlc-plugin-pipewire vlc-plugin-svg mumble mumble-server gimp gimp-data-extras inkscape corectrl ocrmypdf img2pdf pdfminer-data minetest libdvd-pkg virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system python3-tk tix qt6ct ecryptfs-utils python-is-python3 gallery-dl gnome-epub-thumbnailer
+sudo apt install -y synaptic fd-find mpv celluloid dconf-editor flatpak pavucontrol exfatprogs xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors libudev0 mesa-utils vulkan-tools gnome-games steam-installer libegl1:i386 mypaint v4l-utils guvcview input-remapper qpwgraph piper strawberry gstreamer1.0-plugins-bad qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins smartmontools gsmartcontrol smart-notifier vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect vorta python3-pyfuse3 easyeffects pdfarranger python3-genshi yt-dlp vlc vlc-plugin-pipewire vlc-plugin-svg mumble gimp gimp-data-extras inkscape corectrl ocrmypdf img2pdf pdfminer-data minetest libdvd-pkg virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system python3-tk tix qt6ct ecryptfs-utils python-is-python3 gallery-dl gnome-epub-thumbnailer mame-tools remmina-plugin-spice
 
 #virtualbox-guest-utils-hwe virtualbox-guest-utils virtualbox-guest-x11-hwe virtualbox-guest-x11
-# wine cpupower-gui calibre wike nnn micro samba peek audacity gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio gnome-tweaks gnome-shell-extension-prefs minetest-server
+# docker-compose-v2 distrobox scrcpy wine cpupower-gui calibre wike nnn micro samba peek audacity gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio gnome-tweaks gnome-shell-extension-prefs minetest-server mumble-server
 
 #virt-manager gnome-boxes spice-webdavd spice-vdagent 
 # virt-manager suggested:
@@ -26,7 +26,7 @@ sudo snap install chromium signal-desktop
 
 sudo apt install gnome-software-plugin-flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install -y org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.discordapp.Discord com.heroicgameslauncher.hgl io.github.peazip.PeaZip fr.romainvigier.MetadataCleaner com.obsproject.Studio com.moonlight_stream.Moonlight runtime/org.freedesktop.Platform.GStreamer.gstreamer-vaapi/x86_64/22.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08 com.interversehq.qView io.gitlab.adhami3310.Footage org.onlyoffice.desktopeditors io.github.mhogomchungu.media-downloader
+sudo flatpak install -y org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.discordapp.Discord com.heroicgameslauncher.hgl io.github.peazip.PeaZip fr.romainvigier.MetadataCleaner com.obsproject.Studio com.moonlight_stream.Moonlight runtime/org.freedesktop.Platform.GStreamer.gstreamer-vaapi/x86_64/22.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08 com.interversehq.qView io.gitlab.adhami3310.Footage org.onlyoffice.desktopeditors io.github.mhogomchungu.media-downloader runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/23.08
 
 #org.chromium.Chromium org.mozilla.firefox org.signal.Signal
 #org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.ryujinx.Ryujinx net.minetest.Minetest
@@ -113,6 +113,14 @@ dconf write /org/gnome/desktop/calendar/show-weekdate "true"
 dconf write /org/gnome/gnome-system-monitor/show-whose-processes "'all'"
 #dconf write /org/gnome/gnome-system-monitor/disktreenew/col-4-visible "true"
 #dconf write /org/gnome/gnome-system-monitor/proctree/col-26-visible "false"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-last "@as []"
+dconf write /org/gnome/mutter/keybindings/toggle-tiled-left "@as []"
+dconf write /org/gnome/mutter/keybindings/toggle-tiled-right "@as []"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/volume-up "['<Control>Up']"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/volume-down "['<Control>Down']"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/previous "['<Control>Left']"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/next "['<Control>Right']"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/mic-mute "['<Alt>period']"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding "'<Shift><Control>Escape'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'gnome-system-monitor'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'System Monitor'"
@@ -293,6 +301,7 @@ echo Setup complete
 # Add to ~/.profile
 #export GNOME_SETUP_DISPLAY=0
 
+# Switch between headphones and speakers - terminal or shortcut
 #pactl list | grep "Headphones"
 #pactl set-sink-port 0 analog-output-headphones
 #pactl list | grep "Line Out"
@@ -304,3 +313,5 @@ echo Setup complete
 # Lower latency, better gaming performance
 # /etc/default/grub
 # GRUB_CMDLINE_LINUX_DEFAULT=preempt=full
+# disable CPU mitigations like spectre
+# GRUB_CMDLINE_LINUX_DEFAULT="preempt=full mitigations=off"
