@@ -147,16 +147,8 @@ echo "alias ytmp3='yt-dlp -x --audio-format mp3'" >> ~/.bashrc
 echo "alias ytogg='yt-dlp -x --audio-format vorbis'" >> ~/.bashrc
 echo "alias gdl='/snap/bin/gallery-dl -d .'" >> ~/.bashrc
 echo "alias rsy='rsync -avhP'" >> ~/.bashrc
+echo "alias rsynp='rsync -avhP --no-perms'" >> ~/.bashrc
 echo "alias rsytest='rsync -navhP'" >> ~/.bashrc
-echo "alias asusp1='xrandr --output HDMI-A-0 --pos 1440x1300 --output DisplayPort-0 --rotate left'" >> ~/.bashrc
-echo "alias asusl1='xrandr --output HDMI-A-0 --pos 2560x290 --output DisplayPort-0 --rotate normal'" >> ~/.bashrc
-echo "alias p1='xrandr --output HDMI-A-0 --pos 1080x750 --output DisplayPort-0 --rotate right'" >> ~/.bashrc
-echo "alias l1='xrandr --output HDMI-A-0 --pos 1920x0 --output DisplayPort-0 --rotate normal'" >> ~/.bashrc
-echo "alias asus60hz='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 59.95 && echo >> ~/.conkyrc'" >> ~/.bashrc
-echo "alias asus75hz='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 74.97 && echo >> ~/.conkyrc'" >> ~/.bashrc
-echo "alias 60hz='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 60.00 && echo >> ~/.conkyrc'" >> ~/.bashrc
-echo "alias 120hz='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120.00 && echo >> ~/.conkyrc'" >> ~/.bashrc
-echo "alias 144hz='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 143.99 && echo >> ~/.conkyrc'" >> ~/.bashrc
 echo "#alias tsup='sudo tailscale up'" >> ~/.bashrc
 echo "#alias tsup='sudo ~/Downloads/Apps/tailscale/tailscaled --state=tailscaled.state'" >> ~/.bashrc
 echo "#alias tsdown='sudo tailscale down'" >> ~/.bashrc
@@ -165,6 +157,7 @@ echo "alias vpnon='sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sudo sysct
 echo "alias vpnoff='sudo sysctl -w net.ipv6.conf.all.disable_ipv6=0 && sudo sysctl -w net.ipv6.conf.default.disable_ipv6=0 && sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=0'" >> ~/.bashrc
 echo "alias lsnames='ls -Q1 | awk '\''{print substr(\$0, 2, length(\$0)-2)}'\'''" >> ~/.bashrc
 # alias lsnames='ls -Q1 | awk '\''{print substr($0, 2, length($0)-2)}'\'''
+echo "alias hc='history -c'" >> ~/.bashrc
 echo "alias GAMEBU=\"7z a '/mnt/data/Rick/Documents/Games/Saves/GAMEFOLDER/'\$(date +'%Y-%m-%d-%s')-GAMENAME.7z '/PATH/TO/FILE.SAV'\"" >> ~/.bashrc
 # alias GAMEBU="7z a '/mnt/data/Rick/Documents/Games/Saves/GAME FOLDER/'$(date +"%Y-%m-%d-%s")-GAMENAME.7z '/PATH/TO/FILE.SAV'"
 
