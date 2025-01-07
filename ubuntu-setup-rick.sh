@@ -140,11 +140,12 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['
 echo >> ~/.bashrc
 echo "# Alias" >> ~/.bashrc
 echo "#alias gmode='gamemoded -r'" >> ~/.bashrc
-echo "alias yt='yt-dlp'" >> ~/.bashrc
-echo "alias yt720='yt-dlp -f \"bestvideo[height<=800]+bestaudio/best[height<=800]\"'" >> ~/.bashrc
-echo "#alias ytup='sudo pip install --upgrade yt-dlp'" >> ~/.bashrc
-echo "alias ytmp3='yt-dlp -x --audio-format mp3'" >> ~/.bashrc
-echo "alias ytogg='yt-dlp -x --audio-format vorbis'" >> ~/.bashrc
+# echo "alias ytup='sudo pip install --upgrade yt-dlp'" >> ~/.bashrc
+# echo "alias yt='yt-dlp'" >> ~/.bashrc
+echo "alias yt='~/.local/share/applications/yt-dlp_linux'" >> ~/.bashrc
+echo "alias yt720='~/.local/share/applications/yt-dlp_linux -f \"bestvideo[height<=800]+bestaudio/best[height<=800]\"'" >> ~/.bashrc
+echo "alias ytmp3='~/.local/share/applications/yt-dlp_linux -x --audio-format mp3'" >> ~/.bashrc
+echo "alias ytogg='~/.local/share/applications/yt-dlp_linux -x --audio-format vorbis'" >> ~/.bashrc
 echo "alias gdl='/snap/bin/gallery-dl -d .'" >> ~/.bashrc
 echo "alias rsy='rsync -avhP'" >> ~/.bashrc
 echo "alias rsynp='rsync -avhP --no-perms'" >> ~/.bashrc
