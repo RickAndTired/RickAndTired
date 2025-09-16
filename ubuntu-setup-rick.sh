@@ -146,16 +146,16 @@ echo "alias yt='~/.local/share/applications/yt-dlp_linux'" >> ~/.bashrc
 echo "alias yt720='~/.local/share/applications/yt-dlp_linux -f \"bestvideo[height<=800]+bestaudio/best[height<=800]\"'" >> ~/.bashrc
 echo "alias ytmp3='~/.local/share/applications/yt-dlp_linux -x --audio-format mp3'" >> ~/.bashrc
 echo "alias ytogg='~/.local/share/applications/yt-dlp_linux -x --audio-format vorbis'" >> ~/.bashrc
-echo "alias gdl='/snap/bin/gallery-dl -d .'" >> ~/.bashrc
+echo "alias gdl='~/.local/share/applications/gallery-dl.bin -d .'" >> ~/.bashrc
 echo "alias rsy='rsync -avhP'" >> ~/.bashrc
 echo "alias rsynp='rsync -avhP --no-perms'" >> ~/.bashrc
 echo "alias rsytest='rsync -navhP'" >> ~/.bashrc
+echo "alias ecry='ecryptfs-mount-private'" >> ~/.bashrc
 echo "#alias tsup='sudo tailscale up'" >> ~/.bashrc
 echo "#alias tsup='sudo ~/Downloads/Apps/tailscale/tailscaled --state=tailscaled.state'" >> ~/.bashrc
 echo "#alias tsdown='sudo tailscale down'" >> ~/.bashrc
-echo "alias ecry='ecryptfs-mount-private'" >> ~/.bashrc
-echo "alias vpnon='sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1 && sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1'" >> ~/.bashrc
-echo "alias vpnoff='sudo sysctl -w net.ipv6.conf.all.disable_ipv6=0 && sudo sysctl -w net.ipv6.conf.default.disable_ipv6=0 && sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=0'" >> ~/.bashrc
+echo "#alias vpnon='sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1 && sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1'" >> ~/.bashrc
+echo "#alias vpnoff='sudo sysctl -w net.ipv6.conf.all.disable_ipv6=0 && sudo sysctl -w net.ipv6.conf.default.disable_ipv6=0 && sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=0'" >> ~/.bashrc
 echo "alias lsnames='ls -Q1 | awk '\''{print substr(\$0, 2, length(\$0)-2)}'\'''" >> ~/.bashrc
 # alias lsnames='ls -Q1 | awk '\''{print substr($0, 2, length($0)-2)}'\'''
 echo "alias hc='history -c'" >> ~/.bashrc
