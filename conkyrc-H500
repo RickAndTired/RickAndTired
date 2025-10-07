@@ -13,7 +13,7 @@ conky.config = {
   use_xft = true,
   font = 'DejaVu Sans Mono:size=10',
   gap_x = -1900,
-  gap_y = 160,
+  gap_y = 200,
   maximum_width = 220,
   minimum_height = 5,
   minimum_width = 5,
@@ -77,10 +77,11 @@ conky.text = [[
 # Sector 4: "CPU", Core Frequency, Core temp, CPU1,2,3,&4 gauge
   ${font monospace:bold:size=12}AMD Ryzen 5 5600G ${hr 2}
   ${font monospace:bold:size=8}${cpugraph cpu0 FFFFFF FFFFFF}
-  ${font monospace:normal:size=8}Core frequency $color $alignr ${freq_g (1)} GHz
+  ${font monospace:normal:size=8}CPU $color ${freq_g (1)} GHz $alignr GPU: ${execi 60 sensors | grep mclk | cut -c 14-21}
   # Core 1 temp: $alignr ${hwmon 0 temp 1} C
 CPU: ${execi 60 sensors | grep Tctl | cut -c 16-19}C $alignr GPU: ${execi 60 sensors | grep edge | cut -c 16-19}C
 
+  
 # Not sure what these temps are
 # What1: ${hwmon 2 temp 1}C
 # What2: ${hwmon 0 temp 1}C
@@ -103,16 +104,16 @@ CPU: ${execi 60 sensors | grep Tctl | cut -c 16-19}C $alignr GPU: ${execi 60 sen
   ${font monospace:bold:size=12}SSD & RAM ${hr 2}
  ${font monospace:normal:size=8}SSD $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
   ${fs_bar /}
-  ${font monospace:normal:size=8}Data $alignc ${fs_used /mnt/data} / ${fs_size /mnt/data} $alignr ${fs_used_perc /mnt/data}%
-  ${fs_bar /mnt/data}
+  ${font monospace:normal:size=8}Data $alignc ${fs_used /home/rick/Data} / ${fs_size /home/rick/Data} $alignr ${fs_used_perc /home/rick/Data}%
+  ${fs_bar /home/rick/Data}
   ${font monospace:normal:size=8}RAM $alignc $mem / $memmax $alignr $memperc%
   $membar 
   ${font monospace:normal:size=8}Swap $alignc ${swap /} / ${swapmax} $alignr ${swapperc}%
   $swapbar
   ${font monospace:normal:size=8}Disk IO SSD: $font$alignr${diskio sda2}
   ${diskiograph sda2}
-  ${font monospace:normal:size=8}Disk IO Data: $font$alignr${diskio /dev/nvme0n1p1}
-  ${diskiograph /dev/nvme0n1p1}
+  ${font monospace:normal:size=8}Disk IO Data: $font$alignr${diskio /home/rick/Data}
+  ${diskiograph /home/rick/Data}
 
 # Sector 6: "Network", Wi-Fi ID, Signal, IP address, Upload/Download graph
   ${font monospace:bold:size=12}NETWORK ${hr 2}
