@@ -7,27 +7,29 @@ gsettings set org.gnome.desktop.session idle-delay 0
 
 sudo apt update
 sudo dpkg --add-architecture i386
-sudo apt install -y synaptic fd-find mpv celluloid dconf-editor flatpak pavucontrol exfatprogs xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools unrar p7zip-rar htop net-tools conky-all lm-sensors libudev0 mesa-utils vulkan-tools gnome-games steam-installer libegl1:i386 mypaint v4l-utils guvcview input-remapper qpwgraph piper strawberry gstreamer1.0-plugins-bad qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins smartmontools gsmartcontrol smart-notifier vkbasalt goverlay mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect vorta python3-pyfuse3 easyeffects pdfarranger python3-genshi yt-dlp vlc vlc-plugin-pipewire vlc-plugin-svg mumble gimp gimp-data-extras inkscape corectrl ocrmypdf img2pdf pdfminer-data minetest libdvd-pkg virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system python3-tk tix qt6ct qt5ct ecryptfs-utils python-is-python3 gallery-dl gnome-epub-thumbnailer mame-tools remmina-plugin-spice
+sudo apt install -y gnome-tweaks fd-find mpv dconf-editor flatpak xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools unrar htop net-tools conky-all lm-sensors libudev0 mesa-utils vulkan-tools gnome-games steam-installer distrobox v4l-utils guvcview input-remapper qpwgraph strawberry metadata-cleaner scribus smartmontools gsmartcontrol smart-notifier vkbasalt mangohud libfuse2t64 gnome-sushi gufw graphicsmagick ubuntu-restricted-extras pdfarranger vlc vlc-plugin-pipewire vlc-plugin-svg mumble audacity gimp gimp-data-extras inkscape ocrmypdf img2pdf pdfminer-data libdvd-pkg qt6ct qt5ct ecryptfs-utils python-is-python3 gnome-epub-thumbnailer mame-tools remmina-plugin-spice python3-genshi python3-pyfuse3 python3-tk tix virt-manager virtiofsd obs-studio obs-retro-effects obs-vintage-filter
 
+#chromium-browser synaptic celluloid pavucontrol p7zip-rar libegl1:i386 mypaint piper goverlay gnome-shell-extensions gnome-shell-extension-gsconnect vorta luanti easyeffects yt-dlp gallery-dl corectrl gstreamer1.0-plugins-bad qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins vde2 vde2-cryptcab qemu-system docker-compose-v2 scrcpy wine cpupower-gui calibre wike nnn micro samba peek gpodder stacer bashtop uget menulibre glances magic-wormhole gnome-shell-extension-prefs
 
 #virtualbox-guest-utils-hwe virtualbox-guest-utils virtualbox-guest-x11-hwe virtualbox-guest-x11
-# docker-compose-v2 distrobox scrcpy wine cpupower-gui calibre wike nnn micro samba peek audacity gpodder stacer bashtop uget menulibre glances magic-wormhole obs-studio gnome-tweaks gnome-shell-extension-prefs minetest-server mumble-server
 
 #virt-manager gnome-boxes spice-webdavd spice-vdagent 
 # virt-manager suggested:
-# gstreamer1.0-plugins-bad libvirt-clients-qemu libvirt-login-shell libvirt-daemon-driver-storage-gluster libvirt-daemon-driver-storage-iscsi-direct libvirt-daemon-driver-storage-rbd libvirt-daemon-driver-storage-zfs libvirt-daemon-driver-lxc libvirt-daemon-driver-vbox libvirt-daemon-driver-xen numad auditd nfs-common open-iscsi pm-utils systemtap zfsutils trousers python3-guestfs ssh-askpass python3-argcomplete
+#libvirt-clients-qemu libvirt-daemon-driver-storage-iscsi-direct libvirt-daemon-driver-xen numad vde2 python3-guestfs libvirt-login-shell libvirt-daemon-driver-storage-rbd libvirt-daemon-plugin-sanlock passt trousers ssh-askpass libvirt-daemon-driver-lxc libvirt-daemon-driver-storage-zfs auditd nfs-common  python3-argcomplete libvirt-daemon-driver-storage-gluster libvirt-daemon-driver-vbox systemtap samba virt-viewer
 
 sudo dpkg-reconfigure libdvd-pkg
 
-sudo snap install chromium signal-desktop 
+#sudo snap install chromium signal-desktop 
 # gallery-dl
 # AppImage - Sunshine Moonlight Inkscape LocalSend Upscayl avidemux losslesscut pix
 # None - GW2Switcheroo MyStation tailscale ryujinx MasterPDFEditor ventoy itch.io sidequest Unigine_Superposition 
 # sudo pip install --upgrade yt-dlp
 
-sudo apt install gnome-software-plugin-flatpak
+#sudo apt install gnome-software-plugin-flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install -y org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.discordapp.Discord com.heroicgameslauncher.hgl io.github.peazip.PeaZip fr.romainvigier.MetadataCleaner com.obsproject.Studio com.moonlight_stream.Moonlight runtime/org.freedesktop.Platform.GStreamer.gstreamer-vaapi/x86_64/22.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08 com.interversehq.qView io.gitlab.adhami3310.Footage org.onlyoffice.desktopeditors io.github.mhogomchungu.media-downloader runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/23.08
+sudo flatpak install -y org.gtk.Gtk3theme.Yaru-Orange-dark/x86_64/stable com.github.tchx84.Flatseal com.discordapp.Discord com.heroicgameslauncher.hgl runtime/org.freedesktop.Platform.GStreamer.gstreamer-vaapi/x86_64/22.08 runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08 runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/23.08
+
+#com.obsproject.Studio com.moonlight_stream.Moonlight io.github.peazip.PeaZip com.interversehq.qView io.gitlab.adhami3310.Footage org.onlyoffice.desktopeditors io.github.mhogomchungu.media-downloader
 
 #org.chromium.Chromium org.mozilla.firefox org.signal.Signal
 #org.libretro.RetroArch net.pcsx2.PCSX2 org.DolphinEmu.dolphin-emu org.ryujinx.Ryujinx net.minetest.Minetest
@@ -57,8 +59,18 @@ gsettings set org.gnome.shell.extensions.ding show-home false
 
 gsettings set org.gnome.nautilus.preferences show-create-link true
 
+gsettings set org.gnome.nautilus.preferences show-hidden-files true
+
+gsettings set org.gnome.nautilus.preferences recursive-search always
+
+gsettings set org.gnome.nautilus.preferences show-image-thumbnails always
+
 gsettings set org.gnome.nautilus.preferences thumbnail-limit 1000 
 # (1GB)
+
+gsettings set org.gtk.gtk4.settings file-chooser show-hidden true
+
+gsettings set org.gtk.settings file-chooser show-hidden true
 
 ##gsettings set org.gnome.nautilus.preferences executable-text-activation ask
 
@@ -86,7 +98,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 gsettings set org.gnome.desktop.interface gtk-theme Yaru-dark
 
-##gsettings set org.gnome.desktop.interface icon-theme Yaru-dark
+gsettings set org.gnome.desktop.interface icon-theme Yaru-dark
 
 gsettings set org.gnome.desktop.interface enable-hot-corners true
 
@@ -103,8 +115,8 @@ dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gno
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-last "@as []"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/mic-mute "['<Alt>period']"
 dconf write /org/gnome/desktop/search-providers/disabled "['org.gnome.Nautilus.desktop']"
-dconf write /org/gnome/terminal/legacy/keybindings/paste "'<Primary>v'"
-dconf write /org/gnome/terminal/legacy/keybindings/copy "'<Primary>c'"
+dconf write /org/gnome/Ptyxis/Shortcuts/paste-clipboard "'<Primary>v'"
+dconf write /org/gnome/Ptyxis/Shortcuts/copy-clipboard "'<Primary>c'"
 dconf write /org/gnome/TextEditor/indent-style "'space'"
 dconf write /org/gnome/TextEditor/tab-width "uint32 4"
 dconf write /org/gnome/TextEditor/show-line-numbers "true"
@@ -114,7 +126,6 @@ dconf write /org/gnome/desktop/calendar/show-weekdate "true"
 dconf write /org/gnome/gnome-system-monitor/show-whose-processes "'all'"
 #dconf write /org/gnome/gnome-system-monitor/disktreenew/col-4-visible "true"
 #dconf write /org/gnome/gnome-system-monitor/proctree/col-26-visible "false"
-dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-last "@as []"
 dconf write /org/gnome/mutter/keybindings/toggle-tiled-left "@as []"
 dconf write /org/gnome/mutter/keybindings/toggle-tiled-right "@as []"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/volume-up "['<Control>Up']"
@@ -134,7 +145,20 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/cus
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/binding "'<Super>End'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/command "'systemctl suspend'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/name "'Suspend'"
-dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/binding "'<Control>KP_End'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/command "'pactl set-sink-port 0 analog-output-lineout'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/name "'Headphones'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/binding "'<Control>KP_Down'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/command "'pactl set-sink-port 0 analog-output-headphones'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/name "'Speaker'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/binding "'<Control>KP_Home'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/command "'nmcli device disconnect enp7s0'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/name "'Network Off'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/binding "'<Control>KP_Up'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/command "'nmcli device connect enp7s0'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/name "'Network On'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings  "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/']"
+
 
 
 # Bash Aliases
@@ -168,12 +192,12 @@ echo "alias GAMEBU=\"7z a '/mnt/data/Rick/Documents/Games/Saves/GAMEFOLDER/'\$(d
 
 touch ~/Templates/'NewDocument'
 
-# Fix cursor on QT programs
-mkdir -p ~/.icons/default
-echo "[Icon Theme]
-Name=Default
-Comment=Default Cursor Theme
-Inherits=Yaru" > ~/.icons/default/index.theme
+# Fix cursor on QT programs - still needed?
+#mkdir -p ~/.icons/default
+#echo "[Icon Theme]
+#Name=Default
+#Comment=Default Cursor Theme
+#Inherits=Yaru" > ~/.icons/default/index.theme
 
 echo Setup complete
 
@@ -314,3 +338,18 @@ echo Setup complete
 # GRUB_CMDLINE_LINUX_DEFAULT=preempt=full
 # disable CPU mitigations like spectre
 # GRUB_CMDLINE_LINUX_DEFAULT="preempt=full mitigations=off"
+
+# .desktop files in ~/.config/autostart
+
+#virt-manager network access
+#    sudo virsh net-list --all
+#    sudo virsh net-start default
+#    sudo virsh net-autostart --network default
+
+#apt install ecryptfs-utils (cryptsetup?)
+#Reboot?
+#ecryptfs-setup-private --nopwcheck --noautomount
+#login passphrase - create
+#mount passphrase - press Enter to generate one
+#ecryptfs-unwrap-passphrase - backup
+#ecryptfs-mount-private
