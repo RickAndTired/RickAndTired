@@ -80,7 +80,6 @@ conky.text = [[
   ${font monospace:normal:size=8}CPU $color ${freq_g (1)} GHz $alignr GPU: ${execi 60 sensors | grep mclk | cut -c 14-21}
   # Core 1 temp: $alignr ${hwmon 0 temp 1} C
 CPU: ${execi 60 sensors | grep Tctl | cut -c 16-19}C $alignr GPU: ${execi 60 sensors | grep edge | cut -c 16-19}C
-
   
 # Not sure what these temps are
 # What1: ${hwmon 2 temp 1}C
@@ -112,8 +111,8 @@ CPU: ${execi 60 sensors | grep Tctl | cut -c 16-19}C $alignr GPU: ${execi 60 sen
   $swapbar
   ${font monospace:normal:size=8}Disk IO SSD: $font$alignr${diskio sda2}
   ${diskiograph sda2}
-  ${font monospace:normal:size=8}Disk IO Data: $font$alignr${diskio /home/rick/Data}
-  ${diskiograph /home/rick/Data}
+  ${font monospace:normal:size=8}Disk IO Data: $font$alignr${diskio /dev/nvme0n1p1}
+  ${diskiograph /dev/nvme0n1p1}
 
 # Sector 6: "Network", Wi-Fi ID, Signal, IP address, Upload/Download graph
   ${font monospace:bold:size=12}NETWORK ${hr 2}
