@@ -102,6 +102,8 @@ gsettings set org.gnome.desktop.interface icon-theme Yaru-dark
 
 gsettings set org.gnome.desktop.interface enable-hot-corners true
 
+gsettings set org.gnome.Ptyxis restore-session false
+
 gsettings set com.ubuntu.update-notifier regular-auto-launch-interval 0
 
 #gnome-extensions disable ubuntu-appindicators@ubuntu.com
