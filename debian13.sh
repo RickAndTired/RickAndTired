@@ -1,11 +1,8 @@
 #!/bin/bash
 
-#Contrib
+#Contrib non-free
 #sudo nano /etc/apt/sources.list
-#add "contrib" after main 
-#Non-Free
-#sudo nano /etc/apt/sources.list
-#add "non-free" after contrib 
+#add "contrib non-free" after all "main" 
 
 
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
@@ -54,14 +51,13 @@ gsettings set org.gnome.nautilus.preferences show-create-link true
 
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
 
-gsettings set org.gtk.gtk4.settings file-chooser show-hidden true
-
-gsettings set org.gtk.gtk4.settings file-chooser sort-directories-first true
-
 gsettings set org.gnome.nautilus.preferences show-image-thumbnails always
 
 gsettings set org.gnome.nautilus.preferences thumbnail-limit 1000 
 # (1GB)
+
+#gsettings set org.gtk.gtk4.settings file-chooser show-hidden true
+#gsettings set org.gtk.gtk4.settings file-chooser sort-directories-first true
 
 ##gsettings set org.gnome.nautilus.preferences executable-text-activation ask
 
@@ -108,6 +104,8 @@ gsettings set org.gnome.desktop.interface cursor-size 40
 
 dconf write /org/gnome/shell/favorite-apps "['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.strawberrymusicplayer.strawberry.desktop', 'com.discordapp.Discord.desktop', 'steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'MyStation.desktop', 'org.gnome.SystemMonitor.desktop', 'org.gnome.Terminal.desktop']"
 
+dconf write /org/gtk/gtk4/settings/file-chooser/show-hidden "true"
+dconf write /org/gtk/gtk4/settings/file-chooser/sort-directories-first "true"
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-last "@as []"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/mic-mute "['<Alt>period']"
 dconf write /org/gnome/desktop/search-providers/disabled "['org.gnome.Nautilus.desktop']"
