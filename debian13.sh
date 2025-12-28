@@ -13,7 +13,7 @@ gsettings set org.gnome.desktop.session idle-delay 0
 sudo apt update
 sudo dpkg --add-architecture i386
 sudo apt update
-sudo apt install -y steam-installer mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 ecryptfs-utils libfuse2t64 p7zip-full dconf-editor input-remapper qpwgraph mangohud vkbasalt graphicsmagick distrobox htop pdfarranger mpv unrar inkscape virt-manager virtiofsd chromium strawberry metadata-cleaner scribus gnome-software-plugin-flatpak gufw vlc lm-sensors gimp gimp-data-extras gnome-games gnome-shell-extension-dashtodock gnome-shell-extension-dash-to-panel gnome-shell-extension-appindicator gnome-shell-extensions conky-all rsync qt6ct qt5ct fonts-recommended fonts-liberation fonts-liberation2 obs-studio obs-retro-effects obs-vintage-filter
+sudo apt install -y steam-installer mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 ecryptfs-utils libfuse2t64 p7zip-full dconf-editor input-remapper qpwgraph mangohud vkbasalt graphicsmagick distrobox htop pdfarranger mpv unrar unrar-free inkscape virt-manager virtiofsd chromium strawberry metadata-cleaner scribus gnome-software-plugin-flatpak gufw vlc lm-sensors gimp gimp-data-extras gnome-games gnome-shell-extension-dashtodock gnome-shell-extension-dash-to-panel gnome-shell-extension-appindicator gnome-shell-extensions conky-all rsync qt6ct qt5ct fonts-recommended fonts-liberation fonts-liberation2 obs-studio obs-retro-effects obs-vintage-filter
 
 
 
@@ -219,3 +219,9 @@ echo Setup complete
 #mount passphrase - press Enter to generate one
 #ecryptfs-unwrap-passphrase - backup
 #ecryptfs-mount-private
+
+#FireFox Search Shortcuts
+#Steam 
+#https://store.steampowered.com/search?term=%s
+#Startpage
+#https://www.startpage.com/do/search?query=%s
