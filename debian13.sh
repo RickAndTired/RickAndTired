@@ -22,7 +22,7 @@ sudo apt install -y steam-installer mesa-vulkan-drivers libglx-mesa0:i386 mesa-v
 
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-#sudo flatpak install -y com.github.tchx84.Flatseal com.heroicgameslauncher.hgl runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/25.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/25.08com.github.wwmm.easyeffects com.dec05eba.gpu_screen_recorder
+#sudo flatpak install -y com.github.tchx84.Flatseal com.heroicgameslauncher.hgl runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/25.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/25.08 com.github.wwmm.easyeffects com.dec05eba.gpu_screen_recorder
 #com.obsproject.Studio com.moonlight_stream.Moonlight info.mumble.Mumble org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.kdenlive no.mifi.losslesscut org.upscayl.Upscayl org.chromium.Chromium org.mozilla.firefox com.discordapp.Discord 
 
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
