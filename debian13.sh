@@ -16,13 +16,14 @@ sudo apt update
 sudo apt install -y steam-installer mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 mesa-utils ecryptfs-utils libfuse2t64 p7zip-full dconf-editor reiserfsprogs input-remapper qpwgraph mangohud vkbasalt graphicsmagick distrobox htop pdfarranger mpv unrar unrar-free rar inkscape virt-manager virtiofsd chromium strawberry metadata-cleaner scribus gnome-software-plugin-flatpak gufw vlc lm-sensors gimp gimp-data-extras gnome-games gnome-shell-extension-dashtodock gnome-shell-extension-dash-to-panel gnome-shell-extension-appindicator gnome-shell-extensions conky-all rsync qt6ct qt5ct fonts-recommended fonts-liberation fonts-liberation2 obs-studio obs-retro-effects obs-vintage-filter diffpdf mame-tools gamemode
 
 
-
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
 #openjdk-25-jre libpam-google-authenticator corectrl synaptic pavucontrol exfatprogs xfsprogs xfsdump attr quota btrfs-progs duperemove f2fs-tools v4l-utils guvcview gstreamer1.0-plugins-bad gnome-sushi mumble gameconqueror ttf-mscorefonts-installer
 
 # fd-find mpv celluloid dconf-editor flatpak  unrar p7zip-rar htop net-tools conky-all lm-sensors libudev0 vulkan-tools  steam-installer libegl1:i386 mypaint  input-remapper qpwgraph piper strawberry  qgnomeplatform-qt5 qt5-image-formats-plugins qt5-qmltooling-plugins qt5-style-plugins smartmontools gsmartcontrol smart-notifier vkbasalt goverlay mangohud libfuse2t64  gufw graphicsmagick ubuntu-restricted-extras gnome-shell-extensions gnome-shell-extension-gsconnect vorta python3-pyfuse3 easyeffects pdfarranger python3-genshi yt-dlp vlc vlc-plugin-pipewire vlc-plugin-svg  gimp gimp-data-extras inkscape corectrl ocrmypdf img2pdf pdfminer-data minetest libdvd-pkg virtualbox virtualbox-guest-additions-iso vde2 vde2-cryptcab qemu-system python3-tk tix  ecryptfs-utils python-is-python3 gallery-dl gnome-epub-thumbnailer remmina-plugin-spice
 
+
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+#sudo flatpak install -y com.github.tchx84.Flatseal com.heroicgameslauncher.hgl runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/25.08 runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08 runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/25.08com.github.wwmm.easyeffects com.dec05eba.gpu_screen_recorder
+#com.obsproject.Studio com.moonlight_stream.Moonlight info.mumble.Mumble org.gimp.GIMP org.inkscape.Inkscape org.blender.Blender org.kde.kdenlive no.mifi.losslesscut org.upscayl.Upscayl org.chromium.Chromium org.mozilla.firefox com.discordapp.Discord 
 
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
 
@@ -225,3 +226,17 @@ echo Setup complete
 #https://store.steampowered.com/search?term=%s
 #Startpage
 #https://www.startpage.com/do/search?query=%s
+
+#Dash to Dock
+#Position on screen - Left
+#Panel Mode
+#Icon size limit - 40px
+#-
+#Show trash can - off
+#Show volumes and devices - off
+#-
+#Click action - Focus, minimize or app spread
+#-
+#Show overview on startup - off
+#Customize the dash color - #0B0B0B
+#Customize opacity - Fixed
